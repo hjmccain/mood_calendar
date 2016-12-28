@@ -1,0 +1,16 @@
+- Create users table //
+create table if not exists users (
+		id serial primary key,
+		username text not null,
+		password text not null
+
+);
+
+- Create entries table //
+create table if not exists entries (
+		id serial primary key,
+		mood text not null,
+		date text not null,
+		entry text not null,
+		user_id integer references users
+);

@@ -1,0 +1,21 @@
+{
+error,
+loading,
+logged_in,
+filters: {
+		selected_entry,
+		selected_mood,
+		selected_date
+	},
+entriesReducer: {
+	entries: [
+			{
+				id,
+				date,
+				mood,
+				text,
+				user_id
+			}
+		]
+	}
+}
