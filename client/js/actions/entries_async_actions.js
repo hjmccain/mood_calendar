@@ -2,6 +2,7 @@ import * as actions from './entries_actions';
 
 const users_url = "/users";
 const entries_url = "/entries";
+// const entries_url = "/entrie"; // TODO: error example
 
 export const entryFetch = (id = '') => dispatch => {
 	if (id === '') {

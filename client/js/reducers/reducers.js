@@ -5,6 +5,15 @@ function immutableSplice(arr, start, deleteCount, ...items) {
 	return [ ...arr.slice(0, start), ...items, ...arr.slice(start + deleteCount) ]
 }
 
+const stateInfo = (state = {}, action) => {
+	switch (action.type) {
+		case actions.GET_ENTRIES_ERROR:
+			return state = Object.assign({}, state, { error: true, error_info: action.error });
+		default:
+			return state;
+	}
+}
+
 const filtersState = (state = {}, action) => {
 	switch (action.type) {
 		case actions.GET_SINGLE_ENTRY:
@@ -20,8 +29,6 @@ const entriesState = (state = {}, action) => {
 			return state = Object.assign({}, state, action.entries);
 		case actions.GET_SINGLE_ENTRY_SUCCESS:
 			return state;
-		case actions.GET_ENTRIES_ERROR:
-			return state;
 		default:
 			return state;
 	}
@@ -29,6 +36,7 @@ const entriesState = (state = {}, action) => {
 }
 
 export default combineReducers({
+	stateInfo,
 	filtersState,
 	entriesState
 });

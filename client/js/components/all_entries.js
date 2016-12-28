@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/entries_async_actions';
-import EntriesList from './entries_list';
+import SingleEntry from './single_entry';
 
 class AllEntries extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		console.log('(all_entries props)', props);
+		super(props);
 	}
 
 	componentDidMount () {
@@ -13,22 +14,34 @@ class AllEntries extends React.Component {
 	}
 
 	render () {
-		let entries;
 
-		!this.props.entries ?
-			entries = [] :
-			entries = this.props.entries;
+		if (!this.props.error.error_info) {
+			if (!this.props.entries) {
+				return <div>Loading...</div>
+			} else {
+				return <div>
+								{this.props.entries.map(
+									(entry) =>
+										<SingleEntry
+											key={entry.id}
+											id={entry.id}
+											mood={entry.mood}
+											date={entry.date}
+											text={entry.text} />
+									)}
+							</div>
+			}
+		} else {
+			return <div>Error: {this.props.error.error_info.message}</div>
+		}
 
-			console.log('all_entries.js', this.props.entries);
-
-		return (
-			<div>Placeholder</div>
-		)
 	}
+
 }
 
 const mapStateToProps = (state) => ({
-	entries: state.entriesState.entries
+	entries: state.entriesState.entries,
+	error: state.stateInfo
 });
 
 export default connect(mapStateToProps)(AllEntries);

@@ -1,13 +1,14 @@
 {
-error,
-loading,
-logged_in,
-filters: {
-		selected_entry,
-		selected_mood,
-		selected_date
-	},
-entriesReducer: {
+stateInfo = {
+	error,
+	logged_in
+},
+filtersState: {
+	selected_entry,
+	selected_mood,
+	selected_date
+},
+entriesState: {
 	entries: [
 			{
 				id,

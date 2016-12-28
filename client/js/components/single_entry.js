@@ -3,7 +3,7 @@ import React from 'react';
 function SingleEntry (props) {
 
 	return (
-		<li>
+		<li id={props.id}>
 			<h3>{props.mood}</h3>
 			<p>{props.text}</p>
 			<p>{props.date}</p>
