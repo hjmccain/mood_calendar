@@ -9,6 +9,8 @@ const stateInfo = (state = {}, action) => {
 	switch (action.type) {
 		case actions.GET_ENTRIES_ERROR:
 			return state = Object.assign({}, state, { error: true, error_info: action.error });
+		case actions.SELECT_SINGLE_ENTRY:
+			return state = Object.assign({}, state, { error: null, selected_entry: action.id });
 		default:
 			return state;
 	}

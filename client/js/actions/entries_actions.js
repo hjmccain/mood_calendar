@@ -4,6 +4,12 @@ export const getMultipleEntriesSuccess = entries => ({
 	entries
 });
 
+export const SELECT_SINGLE_ENTRY = 'SELECT_SINGLE_ENTRY';
+export const selectSingleEntry = id => ({
+	type: SELECT_SINGLE_ENTRY,
+	id
+})
+
 export const GET_SINGLE_ENTRY_SUCCESS = 'GET_SINGLE_ENTRY_SUCCESS';
 export const getSingleEntrySuccess = entry => ({
 	type: GET_SINGLE_ENTRY_SUCCESS,
