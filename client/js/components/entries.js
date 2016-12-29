@@ -1,24 +1,23 @@
 import React from 'react';
 import Entry from './entry';
 
-const Entries = ({ entries, onEntryClick, error }) => {
+const Entries = (props) => {
 
-	if (!error.error_info) {
-		if (!entries) {
+	if (!props.error.error_info) {
+		if (!props.entries) {
 			return <div>Loading...</div>
 		} else {
-				return <ul>
-					{entries.map(
-						(entry) =>
+				return (
+					<ul>{props.entries.map((entry) =>
 							<Entry
 								key={entry.id}
 								entry={entry}
-								onClick={() => onEntryClick(entry.id)} />
-						)}
-					</ul>
-				}
+								onMouseOver={() => props.onEntryMouseOver(entry.id)}
+								onMouseOut={() => props.onEntryMouseOut()}
+						/> )}</ul>
+				)}
 	} else {
-		return <div>Error: {error.error_info.message}</div>
+		return <div>Error: {props.error.error_info.message}</div>
 	}
 }
 

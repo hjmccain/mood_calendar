@@ -8,6 +8,11 @@ export const SELECT_SINGLE_ENTRY = 'SELECT_SINGLE_ENTRY';
 export const selectSingleEntry = id => ({
 	type: SELECT_SINGLE_ENTRY,
 	id
+});
+
+export const DESELECT_ENTRY = 'DESELECT_ENTRY';
+export const deSelectEntry = () => ({
+	type: DESELECT_ENTRY
 })
 
 export const GET_SINGLE_ENTRY_SUCCESS = 'GET_SINGLE_ENTRY_SUCCESS';

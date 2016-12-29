@@ -17,9 +17,9 @@ const knex = require('knex')({
 app.use(express.static(process.env.CLIENT_PATH));
 app.use(bodyParser.json());
 
-app.get('/*', (req,res) => {
-	res.sendfile(path.join(__dirname, 'index.html'))
-})
+// app.get('/*', (req,res) => {
+// 	res.sendfile(path.join(__dirname, 'index.html'))
+// })
 
 // USERS
 

@@ -11,6 +11,8 @@ const stateInfo = (state = {}, action) => {
 			return state = Object.assign({}, state, { error: true, error_info: action.error });
 		case actions.SELECT_SINGLE_ENTRY:
 			return state = Object.assign({}, state, { error: null, selected_entry: action.id });
+		case actions.DESELECT_ENTRY:
+			return state = Object.assign({}, state, { error: null, selected_entry: null });
 		default:
 			return state;
 	}
