@@ -11,12 +11,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onEntryMouseOver: (id) => {
-      dispatch(actions.selectSingleEntry(id));
-    },
-		onEntryMouseOut: (id) => {
-      dispatch(actions.deSelectEntry(id));
-    }
+    onEntryMouseOver: (id) => { dispatch(actions.selectSingleEntry(id)) }
   }
 }
 

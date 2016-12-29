@@ -9,7 +9,7 @@ class EditMenu extends React.Component {
 	selectionData(e) {
 		e.preventDefault();
 		if (this.selection.value === 'delete') {
-			this.props.deleteEntry();
+			this.props.deleteEntry(this.selection.value);
 			console.log('edit_menu dropdown selection is DELETE --', this.selection.value);
 		} else if (this.selection.value === 'edit') {
 			console.log('edit_menu dropdown selection is EDIT --', this.selection.value);
@@ -18,8 +18,8 @@ class EditMenu extends React.Component {
 
 	render() {
 		return (
-			<form onBlur={this.selectionData}>
-				<select id={this.props.id} ref={input => this.selection = input}>
+			<form  id={this.props.id} onBlur={this.selectionData}>
+				<select ref={input => this.selection = input}>
 					<option value="...">...</option>
 					<option value="edit">Edit</option>
 					<option value="delete">Delete</option>

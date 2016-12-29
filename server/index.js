@@ -17,19 +17,9 @@ const knex = require('knex')({
 app.use(express.static(process.env.CLIENT_PATH));
 app.use(bodyParser.json());
 
-// app.get('/*', (req,res) => {
-// 	res.sendfile(path.join(__dirname, 'index.html'))
-// })
-
 // USERS
 
 // ENTRIES
-// app.get('/db-entries/:entry', (req, res) => {
-// 	const entry_id = req.params.entry
-// 	knex.where({id: entry_id}).select().from('entries').then((entries) => {
-// 		return res.status(200).json({entries});
-// 	});
-// });
 
 app.get('/db-entries', (req, res) => {
 	console.log('(index.js entries req body)', req.body);
