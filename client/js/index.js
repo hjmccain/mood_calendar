@@ -6,11 +6,14 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import RootContainer from './components/root_container';
+import EntriesContainer from './components/entries_container';
 
 const routes = (
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path="/" component={RootContainer} />
+      <Route path="/entries" component={RootContainer}>
+				<Route path=":entryId" component={EntriesContainer} />
+			</Route>
     </Router>
   </Provider>
 );

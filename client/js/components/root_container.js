@@ -9,7 +9,7 @@ class RootContainer extends React.Component {
 	}
 
 	componentDidMount () {
-		this.props.dispatch(actions.entryFetch());
+		this.props.dispatch(actions.getMultipleEntries());
 	}
 
 	render () {
