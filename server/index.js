@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 // ENTRIES
 
 app.get('/db-entries', (req, res) => {
-	knex.select().from('entries').then((entries) => {
+	knex('entries').then((entries) => {
 		return res.status(200).json({entries});
 	});
 });

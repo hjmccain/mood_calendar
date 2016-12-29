@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/entries_async_actions';
 import EntriesContainer from './entries_container';
+import NewEntryBtn from './new_entry_btn';
 
 class RootContainer extends React.Component {
 	constructor() {
@@ -14,7 +15,10 @@ class RootContainer extends React.Component {
 
 	render () {
 		return (
-			<EntriesContainer />
+			<div>
+				<NewEntryBtn />
+				<EntriesContainer />
+			</div>
 		)
 	}
 }

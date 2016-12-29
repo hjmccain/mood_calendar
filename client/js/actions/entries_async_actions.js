@@ -7,7 +7,9 @@ export const deleteEntry = (id) => dispatch => {
 	return fetch(entries_url,
 		{
 			method: "DELETE",
-			body: JSON.stringify({ id }),
+			body: JSON.stringify({
+				id: id
+			}),
 			headers: {"Content-Type": "application/json"}
 		})
 		.then(res => {
@@ -21,6 +23,16 @@ export const deleteEntry = (id) => dispatch => {
 			dispatch(actions.getEntriesError(err));
 		});
 }
+
+// export const addEntry = (mood, text) => dispatch (
+// 	return fetch(entries_url,
+// 		{
+// 			method: "DELETE",
+// 			body: JSON.stringify({ mood, text }),
+// 			headers: {"Content-Type": "application/json"}
+// 		}
+// 	)
+// )
 
 export const getEntries = () => dispatch => {
 	return fetch(entries_url)
