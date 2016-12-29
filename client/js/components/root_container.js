@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/entries_async_actions';
-import AllEntriesContainer from './all_entries_container';
+import EntriesContainer from './entries_container';
 
 class RootContainer extends React.Component {
 	constructor() {
@@ -14,7 +14,7 @@ class RootContainer extends React.Component {
 
 	render () {
 		return (
-			<AllEntriesContainer />
+			<EntriesContainer />
 		)
 	}
 }
