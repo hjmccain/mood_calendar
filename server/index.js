@@ -22,11 +22,44 @@ app.use(bodyParser.json());
 // ENTRIES
 
 app.get('/db-entries', (req, res) => {
-	console.log('(index.js entries req body)', req.body);
 	knex.select().from('entries').then((entries) => {
 		return res.status(200).json({entries});
 	});
 });
+
+app.delete('/db-entries', (req, res) => {
+	console.log('(index.js entries req body)', req.body.id);
+	if (!req.body) {
+		return res.status(400).json({
+			message: 'No request body'
+		});
+	}
+	if (req.body.id === " ") {
+		return res.status(422).json({
+			message: 'Missing field: ID'
+		});
+	}
+	if (typeof req.body.id ===  isNaN) {
+		return res.status(422).json({
+			message: 'Incorrect field type: #'
+		});
+	}
+	knex('entries').where({id: req.body.id}).del()
+		.then(
+			res.status(204).json({})
+		).catch(e => {
+		console.error(e);
+		res.sendStatus(500);
+	});
+});
+
+// use to select single entry?
+// app.delete('/db-entries', (req, res) => {
+// 	console.log('(index.js entries req body)', req.body);
+// 	knex.select().from('entries').where({id: req.body.id}).then((entries) => {
+// 		return res.status(200).json({entries});
+// 	});
+// });
 
 console.log(`Server running in ${process.env.NODE_ENV} mode`);
 

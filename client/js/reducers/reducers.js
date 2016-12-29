@@ -29,10 +29,8 @@ const filtersState = (state = {}, action) => {
 
 const entriesState = (state = {}, action) => {
 	switch (action.type) {
-		case actions.GET_MULTIPLE_ENTRIES_SUCCESS:
+		case actions.GET_ENTRIES_SUCCESS:
 			return state = Object.assign({}, state, action.entries);
-		case actions.GET_SINGLE_ENTRY_SUCCESS:
-			return state;
 		default:
 			return state;
 	}

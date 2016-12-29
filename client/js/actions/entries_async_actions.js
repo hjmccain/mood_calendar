@@ -16,13 +16,13 @@ export const deleteEntry = (id) => dispatch => {
 			}
 			return res.json();
 		}).then(res => {
-			console.log('async actions delete success');
+			dispatch(actions.getEntriesSuccess(res));
 		}).catch(err => {
-			console.log('async actions delete error');
+			dispatch(actions.getEntriesError(err));
 		});
 }
 
-export const getMultipleEntries = () => dispatch => {
+export const getEntries = () => dispatch => {
 	return fetch(entries_url)
 		.then(res => {
 			if (!res.ok) {
@@ -30,7 +30,7 @@ export const getMultipleEntries = () => dispatch => {
 			}
 			return res.json();
 		}).then(res => {
-			dispatch(actions.getMultipleEntriesSuccess(res));
+			dispatch(actions.getEntriesSuccess(res));
 		}).catch(err => {
 			dispatch(actions.getEntriesError(err));
 		});
