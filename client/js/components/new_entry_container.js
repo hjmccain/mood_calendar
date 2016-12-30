@@ -7,7 +7,8 @@ const mapStateToProps = (state) => ({});
 
 // const mapDispatchToProps = (dispatch) => {
 //   return {
-//     onSubmit: (id) => { dispatch(actions.postNewEntry(id)) }
+//     onSubmit: (id) => { dispatch(actions.postNewEntry(id)) },
+// 		sendUserInput: (input) => { dispatch(actions.saveUserInput(input)) }
 //   }
 // }
 

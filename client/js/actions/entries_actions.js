@@ -19,3 +19,9 @@ export const selectSingleEntry = id => ({
 	type: SELECT_SINGLE_ENTRY,
 	id
 });
+
+export const SAVE_USER_INPUT = 'SAVE_USER_INPUT';
+export const saveUserInput = input => ({
+	type: SAVE_USER_INPUT,
+	input
+})

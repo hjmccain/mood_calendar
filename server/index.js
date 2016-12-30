@@ -27,6 +27,21 @@ app.get('/db-entries', (req, res) => {
 	});
 });
 
+// TODO: remove hardcoding!
+app.post('/db-entries', (req, res) => {
+	knex.insert({
+		text: body.text,
+		date: new Date(),
+		mood: "Happy",
+		user_id: 1
+	}).into('entries').then(r => {
+		return res.status(201).json({})
+	}).catch(e => {
+		console.error(e);
+		res.sendStatus(500);
+	})
+});
+
 app.delete('/db-entries', (req, res) => {
 	console.log('(index.js entries req body)', req.body.id);
 	if (!req.body) {
@@ -45,9 +60,9 @@ app.delete('/db-entries', (req, res) => {
 		});
 	}
 	knex('entries').where({id: req.body.id}).del()
-		.then(
-			res.status(204).json({})
-		).catch(e => {
+		.then(() => {
+			res.sendStatus(204);
+		}).catch(e => {
 		console.error(e);
 		res.sendStatus(500);
 	});

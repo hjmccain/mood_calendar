@@ -12,8 +12,6 @@ const Entries = (props) => {
 						<Entry
 							key={entry.id}
 							entry={entry}
-							onMouseOver={() => props.onEntryMouseOver(entry.id)}
-							onMouseOut={() => props.onEntryMouseOut()}
 							/>
 					)}
 				</ul>
