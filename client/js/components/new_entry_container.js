@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/entries_actions';
-import Entries from './entries';
+import NewEntryForm from './new_entry_form';
 
 const mapStateToProps = (state) => ({});
 
@@ -11,5 +11,5 @@ const mapStateToProps = (state) => ({});
 //   }
 // }
 
-export default connect(mapStateToProps)(Entries);
+export default connect(mapStateToProps)(NewEntryForm);
 // export default connect(mapStateToProps, mapDispatchToProps)(Entries);

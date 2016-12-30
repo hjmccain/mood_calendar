@@ -7,14 +7,14 @@ import store from './store';
 
 import RootContainer from './components/root_container';
 import EntriesContainer from './components/entries_container';
-import TextArea from './components/textarea';
+import NewEntryContainer from './components/new_entry_container';
 import SanityCheck from './components/sanity_check';
 
 const routes = (
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/entries" component={RootContainer} />
-			<Route path="/entries/new_entry" component={SanityCheck} />
+			<Route path="/entries/new_entry" component={NewEntryContainer} />
     </Router>
   </Provider>
 );
