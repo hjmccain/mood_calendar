@@ -15,7 +15,7 @@ class TextArea extends React.Component {
 				<textarea
 					id="clear" rows="10" cols="100"
 					ref={input => this.textInput = input}
-					onBlur={this.sendInput} />
+					onChange={this.sendInput} />
 		)
 	}
 }

@@ -9,7 +9,6 @@ class EditMenu extends React.Component {
 	selectionData(e) {
 		e.preventDefault();
 		if (this.selection.value === 'delete') {
-			//
 			this.props.deleteEntry(this.props.id);
 			console.log('edit_menu dropdown selection is DELETE --', this.selection.value);
 		} else if (this.selection.value === 'edit') {

@@ -24,12 +24,13 @@ export const deleteEntry = (id) => dispatch => {
 }
 
 // TODO: add user ID input when user component is added
-export const addEntry = (text) => dispatch => {
+export const addEntry = (text, mood) => dispatch => {
 	return fetch(entries_url,
 		{
 			method: "POST",
 			body: JSON.stringify({
-				text: text
+				text: text,
+				mood: mood
 			}),
 			headers: {"Content-Type": "application/json"}
 		}

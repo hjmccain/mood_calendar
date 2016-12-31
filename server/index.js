@@ -30,9 +30,9 @@ app.get('/db-entries', (req, res) => {
 // TODO: remove hardcoding!
 app.post('/db-entries', (req, res) => {
 	knex.insert({
-		text: body.text,
+		text: req.body.text,
 		date: new Date(),
-		mood: "Happy",
+		mood: req.body.mood,
 		user_id: 1
 	}).into('entries').then(r => {
 		return res.status(201).json({})
