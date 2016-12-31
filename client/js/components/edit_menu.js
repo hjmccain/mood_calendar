@@ -1,4 +1,5 @@
 import React from 'react';
+import {hashHistory} from 'react-router';
 
 class EditMenu extends React.Component {
 	constructor(props) {
@@ -10,15 +11,14 @@ class EditMenu extends React.Component {
 		e.preventDefault();
 		if (this.selection.value === 'delete') {
 			this.props.deleteEntry(this.props.id);
-			console.log('edit_menu dropdown selection is DELETE --', this.selection.value);
 		} else if (this.selection.value === 'edit') {
-			console.log('edit_menu dropdown selection is EDIT --', this.selection.value);
+			hashHistory.push('/entries/' + this.props.id);
 		}
 	}
 
 	render() {
 		return (
-			<form id={this.props.id} onBlur={this.selectionData}>
+			<form id={this.props.id} onChange={this.selectionData}>
 				<select ref={input => this.selection = input}>
 					<option value="...">...</option>
 					<option value="edit">Edit</option>

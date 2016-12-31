@@ -23,13 +23,13 @@ class NewEntryForm extends React.Component {
 	getInput(input) {
 		this.setState({
 			textInput: input
-		})
+		});
 	}
 
 	getMood(mood) {
 		this.setState({
 			moodInput: mood
-		})
+		});
 	}
 
 	render () {
@@ -37,7 +37,7 @@ class NewEntryForm extends React.Component {
 			<form onSubmit={this.sendAddData}>
 				<MoodDropDown getMood={this.getMood}/>
 				<br />
-				<TextArea getInput={this.getInput}/>
+				<TextArea getInput={this.getInput} default={''}/>
 				<br />
 				<button type="submit">Submit New Entry</button>
 			</form>

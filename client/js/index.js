@@ -8,13 +8,14 @@ import store from './store';
 import RootContainer from './components/root_container';
 import EntriesContainer from './components/entries_container';
 import NewEntryContainer from './components/new_entry_container';
-import SanityCheck from './components/sanity_check';
+import EditEntryContainer from './components/edit_entry_container';
 
 const routes = (
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/entries" component={RootContainer} />
 			<Route path="/entries/new_entry" component={NewEntryContainer} />
+			<Route path="/entries/:id" component={EditEntryContainer} />
     </Router>
   </Provider>
 );

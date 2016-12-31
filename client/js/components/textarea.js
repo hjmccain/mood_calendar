@@ -14,6 +14,7 @@ class TextArea extends React.Component {
 		return (
 				<textarea
 					id="clear" rows="10" cols="100"
+					defaultValue={this.props.default}
 					ref={input => this.textInput = input}
 					onChange={this.sendInput} />
 		)
