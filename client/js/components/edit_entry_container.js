@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import * as actions from 'entries_async_actions';
-import TextArea from './textarea';
+import * as actions from '../actions/entries_async_actions';
+import EditEntryForm from './edit_entry_form';
 
-function EditEntryContainer () {
-	return (
-		<div>Edit Entry Container welcomes you!</div>
-	)
+const mapStateToProps = (state) => ({
+	entries: state.entriesState.entries
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    editEntry: (id, mood, text) => { dispatch(actions.editEntry(id, mood, text)) }
+  }
 }
-
-export default EditEntryContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(EditEntryForm);

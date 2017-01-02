@@ -27,14 +27,28 @@ app.get('/db-entries', (req, res) => {
 	});
 });
 
-// TODO: remove hardcoding!
+// TODO: remove hardcoding & add error handling
 app.post('/db-entries', (req, res) => {
 	knex.insert({
 		text: req.body.text,
 		date: new Date(),
 		mood: req.body.mood,
 		user_id: 1
-	}).into('entries').then(r => {
+	}).into('entries').then(() => {
+		return res.status(201).json({})
+	}).catch(e => {
+		console.error(e);
+		res.sendStatus(500);
+	})
+});
+
+// TODO: remove hardcoding & add error handling
+app.put('/db-entries', (req, res) => {
+	knex('entries').where({id: req.body.id})
+	.update({
+		text: req.body.text,
+		mood: req.body.mood
+	}).into('entries').then(() => {
 		return res.status(201).json({})
 	}).catch(e => {
 		console.error(e);

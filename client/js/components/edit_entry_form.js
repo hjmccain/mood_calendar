@@ -1,11 +1,11 @@
 import React from 'react';
-import MoodDropDown from './mood_drop_down';
 import TextArea from './textarea';
+import MoodDropDown from './mood_drop_down';
 import EntrySubmission from './entry_submission';
 
-class NewEntryForm extends React.Component {
-	constructor() {
-		super();
+class EditEntryContainer extends React.Component {
+	constructor(props) {
+		super(props);
 		this.state = {
 			moodInput: '',
 			textInput: ''
@@ -17,7 +17,7 @@ class NewEntryForm extends React.Component {
 
 	sendAddData(e) {
 		e.preventDefault();
-		this.props.postNewEntry(this.state.textInput, this.state.moodInput);
+		this.props.editEntry(this.props.params.id, this.state.textInput, this.state.moodInput);
 	}
 
 	getInput(input) {
@@ -33,11 +33,17 @@ class NewEntryForm extends React.Component {
 	}
 
 	render () {
+		const selectedEntry = this.props.entries.filter((entry) => {
+			return entry.id.toString() === this.props.params.id;
+		});
+
 		return (
 			<form onSubmit={this.sendAddData}>
-				<MoodDropDown getMood={this.getMood} />
+				<MoodDropDown selectedMood={selectedEntry[0].mood}
+					getMood={this.getMood} />
 				<br />
-				<TextArea default={''} getInput={this.getInput} />
+				<TextArea default={selectedEntry[0].text}
+					getInput={this.getInput}/>
 				<br />
 				<EntrySubmission />
 			</form>
@@ -45,7 +51,4 @@ class NewEntryForm extends React.Component {
 	}
 }
 
-export default NewEntryForm;
-
-// TODO: get rid of container files
-// TODO: rely more on router!
+export default EditEntryContainer;

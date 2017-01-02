@@ -1,9 +1,9 @@
 import React from 'react';
 
-function NewEntrySubmission () {
+function EntrySubmission () {
 	return (
 			<button type="submit">Submit New Entry</button>
 	)
 }
 
-export default NewEntrySubmission;
+export default EntrySubmission;
