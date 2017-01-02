@@ -1,0 +1,9 @@
+- Refresh capability on edit page
+- Add filter drop-downs
+- Add welcome page
+- On CRUD change a new page should load
+- Consistent ordering of entries by date
+- Error handling & content checking (e.g. shouldn't be able to select "mood" as a mood, shouldn't be able to submit empty entry)
+
+v2:
+- Add multiple users capability
