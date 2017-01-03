@@ -3,33 +3,29 @@ import TextArea from './textarea';
 import MoodDropDown from './mood_drop_down';
 import EntrySubmission from './entry_submission';
 
-class EditEntryContainer extends React.Component {
+class EditEntryForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			moodInput: '',
 			textInput: ''
 		}
-		this.sendAddData = this.sendAddData.bind(this);
+		this.sendEditData = this.sendEditData.bind(this);
 		this.getInput = this.getInput.bind(this);
 		this.getMood = this.getMood.bind(this);
 	}
 
-	sendAddData(e) {
+	sendEditData(e) {
 		e.preventDefault();
 		this.props.editEntry(this.props.params.id, this.state.textInput, this.state.moodInput);
 	}
 
 	getInput(input) {
-		this.setState({
-			textInput: input
-		});
+		this.setState({ textInput: input });
 	}
 
 	getMood(mood) {
-		this.setState({
-			moodInput: mood
-		});
+		this.setState({ moodInput: mood });
 	}
 
 	render () {
@@ -38,7 +34,7 @@ class EditEntryContainer extends React.Component {
 		});
 
 		return (
-			<form onSubmit={this.sendAddData}>
+			<form onSubmit={this.sendEditData}>
 				<MoodDropDown selectedMood={selectedEntry[0].mood}
 					getMood={this.getMood} />
 				<br />
@@ -51,4 +47,4 @@ class EditEntryContainer extends React.Component {
 	}
 }
 
-export default EditEntryContainer;
+export default EditEntryForm;

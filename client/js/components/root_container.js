@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/entries_async_actions';
 import EntriesContainer from './entries_container';
 import NewEntryBtn from './new_entry_btn';
+import MoodDropDown from './mood_drop_down';
+import HeaderBar from './header_bar';
 
 class RootContainer extends React.Component {
 	constructor() {
@@ -16,7 +18,7 @@ class RootContainer extends React.Component {
 	render () {
 		return (
 			<div>
-				<NewEntryBtn />
+				<HeaderBar />
 				<EntriesContainer />
 			</div>
 		)

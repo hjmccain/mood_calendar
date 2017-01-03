@@ -1,5 +1,6 @@
 import * as actions from '../actions/entries_actions';
 import { combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
 
 function immutableSplice(arr, start, deleteCount, ...items) {
 	return [ ...arr.slice(0, start), ...items, ...arr.slice(start + deleteCount) ]
@@ -7,6 +8,8 @@ function immutableSplice(arr, start, deleteCount, ...items) {
 
 const stateInfo = (state = {}, action) => {
 	switch (action.type) {
+		case actions.SELECT_MOOD:
+			return state = Object.assign({}, state, { selected_mood: action.mood });
 		case actions.GET_ENTRIES_ERROR:
 			return state = Object.assign({}, state, { error: true, error_info: action.error });
 		default:
@@ -36,5 +39,6 @@ const entriesState = (state = {}, action) => {
 export default combineReducers({
 	stateInfo,
 	filtersState,
-	entriesState
+	entriesState,
+	routing: routerReducer
 });

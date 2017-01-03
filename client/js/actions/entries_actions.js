@@ -18,4 +18,10 @@ export const SAVE_USER_INPUT = 'SAVE_USER_INPUT';
 export const saveUserInput = input => ({
 	type: SAVE_USER_INPUT,
 	input
-})
+});
+
+export const SELECT_MOOD = 'SELECT_MOOD';
+export const selectMood = mood => ({
+	type: SELECT_MOOD,
+	mood
+});

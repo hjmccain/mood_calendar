@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
-import store from './store';
 
+import store from './store';
 import RootContainer from './components/root_container';
 import EntriesContainer from './components/entries_container';
 import NewEntryContainer from './components/new_entry_container';
