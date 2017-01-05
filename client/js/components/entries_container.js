@@ -4,7 +4,7 @@ import * as actions from '../actions/entries_actions';
 import Entries from './entries';
 
 const mapStateToProps = (state) => ({
-	selected_entry: state.stateInfo.selected_entry,
+	selectedMood: state.stateInfo.selected_mood,
 	entries: state.entriesState.entries,
 	error: state.stateInfo
 });

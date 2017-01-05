@@ -12,7 +12,7 @@ import EditEntryContainer from './components/edit_entry_container';
 
 const routes = (
   <Provider store={store}>
-    <Router history={hashHistory}>
+		<Router history={hashHistory}>
       <Route path="/entries" component={RootContainer} />
 			<Route path="/entries/new_entry" component={NewEntryContainer} />
 			<Route path="/entries/:id" component={EditEntryContainer} />

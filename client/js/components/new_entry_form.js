@@ -35,7 +35,7 @@ class NewEntryForm extends React.Component {
 	render () {
 		return (
 			<form onSubmit={this.sendAddData}>
-				<MoodDropDown getMood={this.getMood} />
+				<MoodDropDown getMood={this.getMood} dropText={'Select mood'} />
 				<br />
 				<TextArea default={''} getInput={this.getInput} />
 				<br />

@@ -29,6 +29,7 @@ class EditEntryForm extends React.Component {
 	}
 
 	render () {
+		console.log(this.props);
 		const selectedEntry = this.props.entries.filter((entry) => {
 			return entry.id.toString() === this.props.params.id;
 		});
@@ -36,7 +37,7 @@ class EditEntryForm extends React.Component {
 		return (
 			<form onSubmit={this.sendEditData}>
 				<MoodDropDown selectedMood={selectedEntry[0].mood}
-					getMood={this.getMood} />
+					getMood={this.getMood} dropText={'Select mood'} />
 				<br />
 				<TextArea default={selectedEntry[0].text}
 					getInput={this.getInput}/>

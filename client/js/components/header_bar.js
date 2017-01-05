@@ -29,7 +29,7 @@ class HeaderBar extends React.Component {
 		return (
 			<div>
 				<NewEntryBtn />
-				<MoodDropDown getMood={this.getMood} />
+				<MoodDropDown getMood={this.getMood} dropText={'All moods'}/>
 				<button type="submit" onClick={this.sendMoodData}>Filter</button>
 			</div>
 		)

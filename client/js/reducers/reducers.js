@@ -1,6 +1,5 @@
 import * as actions from '../actions/entries_actions';
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
 
 function immutableSplice(arr, start, deleteCount, ...items) {
 	return [ ...arr.slice(0, start), ...items, ...arr.slice(start + deleteCount) ]
@@ -39,6 +38,5 @@ const entriesState = (state = {}, action) => {
 export default combineReducers({
 	stateInfo,
 	filtersState,
-	entriesState,
-	routing: routerReducer
+	entriesState
 });
