@@ -12,7 +12,7 @@ class MoodDropDown extends React.Component {
 
 	render () {
 		return (
-			<select value={this.props.selectedMood}
+			<select defaultValue={this.props.selectedMood}
 				onChange={this.sendMood}
 				ref={mood => this.moodInput = mood}>
 					<option value="mood">{this.props.dropText}</option>

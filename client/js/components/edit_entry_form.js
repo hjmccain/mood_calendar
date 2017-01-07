@@ -23,6 +23,10 @@ class EditEntryForm extends React.Component {
 		hashHistory.push('/confirmation');
 	}
 
+	newMood () {
+
+	}
+
 	getInput(input) { this.setState({ textInput: input }) }
 
 	getMood(mood) { this.setState({ moodInput: mood }) }
