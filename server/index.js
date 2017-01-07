@@ -31,7 +31,7 @@ app.get('/db-entries', (req, res) => {
 app.post('/db-entries', (req, res) => {
 	knex.insert({
 		text: req.body.text,
-		date: new Date(),
+		date: req.body.date,
 		mood: req.body.mood,
 		user_id: 1
 	}).into('entries').then(() => {

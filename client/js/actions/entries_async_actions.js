@@ -30,6 +30,7 @@ export const addEntry = (text, mood) => dispatch => {
 			method: "POST",
 			body: JSON.stringify({
 				text: text,
+				date: new Date(),
 				mood: mood
 			}),
 			headers: {"Content-Type": "application/json"}
