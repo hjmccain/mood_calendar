@@ -9,13 +9,8 @@ const EditEntryContainer = (props) => {
 		props.getEntries();
 		return <div></div>;
 	} else {
-		const selectedEntry = props.entries.filter((entry) => {
-			return entry.id.toString() === props.params.id;
-		});
-
-		return (
-			<EditEntryForm entry={selectedEntry[0]} editEntry={props.editEntry} id={props.params.id}/>
-		)
+		const entry = props.entries.filter((entry) => entry.id.toString() === props.params.id);
+		return <EditEntryForm entry={entry[0]} editEntry={props.editEntry} id={props.params.id}/>
 	}
 
 }

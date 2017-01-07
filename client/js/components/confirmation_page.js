@@ -3,7 +3,9 @@ import HomePageBtn from './home_page_btn';
 
 function ConfirmationPage () {
 	return (
-		<div><HomePageBtn text={'Home'} /></div>
+		<div>
+			<HomePageBtn text={'Home'} />
+		</div>
 	)
 }
 
