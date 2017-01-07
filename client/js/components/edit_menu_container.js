@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
+		getEntries: () => { dispatch(actions.getEntries()) },
     deleteEntry: (id) => { dispatch(actions.deleteEntry(id)) }
   }
 }

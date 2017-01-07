@@ -9,13 +9,15 @@ import RootContainer from './components/root_container';
 import EntriesContainer from './components/entries_container';
 import NewEntryContainer from './components/new_entry_container';
 import EditEntryContainer from './components/edit_entry_container';
+import ConfirmationPage from './components/confirmation_page';
 
 const routes = (
   <Provider store={store}>
 		<Router history={hashHistory}>
 				<Route path="/entries" component={RootContainer} />
-				<Route path="/entries/new_entry" component={NewEntryContainer} />
 				<Route path="/entries/:id" component={EditEntryContainer} />
+				<Route path="/new_entry" component={NewEntryContainer} />
+				<Route path="/confirmation" component={ConfirmationPage} />
     </Router>
   </Provider>
 );

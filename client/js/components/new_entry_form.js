@@ -1,4 +1,5 @@
 import React from 'react';
+import { hashHistory } from 'react-router';
 import MoodDropDown from './mood_drop_down';
 import TextArea from './textarea';
 import EntrySubmission from './entry_submission';
@@ -18,18 +19,15 @@ class NewEntryForm extends React.Component {
 	sendAddData(e) {
 		e.preventDefault();
 		this.props.postNewEntry(this.state.textInput, this.state.moodInput);
+		hashHistory.push('/confirmation');
 	}
 
 	getInput(input) {
-		this.setState({
-			textInput: input
-		});
+		this.setState({ textInput: input });
 	}
 
 	getMood(mood) {
-		this.setState({
-			moodInput: mood
-		});
+		this.setState({ moodInput: mood });
 	}
 
 	render () {

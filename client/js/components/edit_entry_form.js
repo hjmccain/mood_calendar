@@ -1,10 +1,12 @@
 import React from 'react';
+import { hashHistory } from 'react-router';
 import TextArea from './textarea';
 import MoodDropDown from './mood_drop_down';
 import EntrySubmission from './entry_submission';
 
 class EditEntryForm extends React.Component {
 	constructor(props) {
+		console.log(props);
 		super(props);
 		this.state = {
 			moodInput: '',
@@ -17,7 +19,8 @@ class EditEntryForm extends React.Component {
 
 	sendEditData(e) {
 		e.preventDefault();
-		this.props.editEntry(this.props.params.id, this.state.textInput, this.state.moodInput);
+		this.props.editEntry(this.props.id, this.state.textInput, this.state.moodInput);
+		hashHistory.push('/confirmation');
 	}
 
 	getInput(input) { this.setState({ textInput: input }) }

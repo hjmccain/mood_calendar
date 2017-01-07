@@ -14,7 +14,7 @@ const EditEntryContainer = (props) => {
 		});
 
 		return (
-			<EditEntryForm entry={selectedEntry[0]} editEntry={props.editEntry} />
+			<EditEntryForm entry={selectedEntry[0]} editEntry={props.editEntry} id={props.params.id}/>
 		)
 	}
 
