@@ -7,7 +7,6 @@ import HomePageBtn from './home_page_btn';
 
 class EditEntryForm extends React.Component {
 	constructor(props) {
-		console.log(props);
 		super(props);
 		this.state = {
 			moodInput: '',
@@ -22,7 +21,6 @@ class EditEntryForm extends React.Component {
 		e.preventDefault();
 		if (!this.state.moodInput && !this.state.textInput) {
 			alert('No edits were made, but we\'ll save your original post!');
-			hashHistory.push('/confirmation');
 		} else if (!this.state.moodInput) {
 			this.props.editEntry(this.props.id, this.state.textInput, this.props.entry.mood)
 		} else if (!this.state.textInput) {
@@ -34,24 +32,19 @@ class EditEntryForm extends React.Component {
 	}
 
 	getInput(input) { this.setState({ textInput: input }) }
-
 	getMood(mood) { this.setState({ moodInput: mood }) }
 
 	render () {
-		return (
-			<div>
-				<form onSubmit={this.sendEditData}>
-					<MoodDropDown selectedMood={this.props.entry.mood}
-						getMood={this.getMood} dropText={'Select mood'} />
-					<br />
-					<TextArea default={this.props.entry.text}
-						getInput={this.getInput}/>
-					<br />
-					<EntrySubmission />
-				</form>
-				<HomePageBtn text={'Cancel'} />
-			</div>
-		)
+		return <div>
+						<form onSubmit={this.sendEditData}>
+							<MoodDropDown selectedMood={this.props.entry.mood}
+								getMood={this.getMood} dropText={'Select mood'} />
+							<TextArea default={this.props.entry.text}
+								getInput={this.getInput}/>
+							<EntrySubmission />
+						</form>
+						<HomePageBtn text={'Cancel'} />
+					</div>
 	}
 }
 
