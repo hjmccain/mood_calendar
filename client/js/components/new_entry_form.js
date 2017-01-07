@@ -30,7 +30,6 @@ class NewEntryForm extends React.Component {
 	}
 
 	getInput(input) { this.setState({ textInput: input }) }
-
 	getMood(mood) { this.setState({ moodInput: mood }) }
 
 	render () {

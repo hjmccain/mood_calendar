@@ -16,12 +16,10 @@ class RootContainer extends React.Component {
 	}
 
 	render () {
-		return (
-			<div>
-				<HeaderBar />
-				<EntriesContainer />
-			</div>
-		)
+		return 	<div>
+							<HeaderBar />
+							<EntriesContainer />
+						</div>
 	}
 }
 

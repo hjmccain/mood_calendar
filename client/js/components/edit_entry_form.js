@@ -37,10 +37,10 @@ class EditEntryForm extends React.Component {
 	render () {
 		return <div>
 						<form onSubmit={this.sendEditData}>
-							<MoodDropDown selectedMood={this.props.entry.mood}
-								getMood={this.getMood} dropText={'Select mood'} />
-							<TextArea default={this.props.entry.text}
-								getInput={this.getInput}/>
+							<MoodDropDown selectedMood={this.props.entry.mood} getMood={this.getMood} dropText={'Select mood'} />
+							<br />
+							<TextArea default={this.props.entry.text} getInput={this.getInput}/>
+							<br />
 							<EntrySubmission />
 						</form>
 						<HomePageBtn text={'Cancel'} />

@@ -20,9 +20,7 @@ class HeaderBar extends React.Component {
 	}
 
 	getMood(mood) {
-		this.setState({
-			moodInput: mood
-		});
+		this.setState({ moodInput: mood });
 	}
 
 	render () {

@@ -11,5 +11,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-// export default connect(mapStateToProps)(NewEntryForm);
 export default connect(mapStateToProps, mapDispatchToProps)(NewEntryForm);
