@@ -1,12 +1,17 @@
-- Refresh capability -- get react-router-redux working!
+X Refresh capability on edit page
 X Add filter drop-downs
-X Add filter to entries display <<
-- Selected mood function not working on edit
-- Add welcome page
+X Add filter to entries display
+X Selected mood function not working on edit
 X On CRUD change a new page should load
 X Consistent ordering of entries by date
-- Error handling & content checking (e.g. shouldn't be able to select "mood" as a mood, shouldn't be able to submit empty entry)
-- Add cancel edit/cancel add button
+X Error handling & content checking (e.g. shouldn't be able to select "mood" as a mood, shouldn't be able to submit empty entry)
+X Add cancel edit/cancel add button
+X Add welcome page
 
 v2:
 - Add multiple users capability
+- Add edit tracking
+- Register returns/tabs when rendering entries from db
+- Add calendar view
+- Change date format
+- Filter by date

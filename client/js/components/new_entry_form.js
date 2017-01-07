@@ -3,6 +3,7 @@ import { hashHistory } from 'react-router';
 import MoodDropDown from './mood_drop_down';
 import TextArea from './textarea';
 import EntrySubmission from './entry_submission';
+import HomePageBtn from './home_page_btn';
 
 class NewEntryForm extends React.Component {
 	constructor() {
@@ -18,32 +19,32 @@ class NewEntryForm extends React.Component {
 
 	sendAddData(e) {
 		e.preventDefault();
-		this.props.postNewEntry(this.state.textInput, this.state.moodInput);
-		hashHistory.push('/confirmation');
+		if (!this.state.textInput) {
+			alert('You didn\'t write anything! Jot down some feelings, or you can cancel.')
+		} else if (!this.state.moodInput) {
+			alert('How are you feeling? Choose a mood, then try submitting again.')
+		} else {
+			this.props.postNewEntry(this.state.textInput, this.state.moodInput);
+			hashHistory.push('/confirmation');
+		}
 	}
 
-	getInput(input) {
-		this.setState({ textInput: input });
-	}
+	getInput(input) { this.setState({ textInput: input }) }
 
-	getMood(mood) {
-		this.setState({ moodInput: mood });
-	}
+	getMood(mood) { this.setState({ moodInput: mood }) }
 
 	render () {
-		return (
-			<form onSubmit={this.sendAddData}>
-				<MoodDropDown getMood={this.getMood} dropText={'Select mood'} />
-				<br />
-				<TextArea default={''} getInput={this.getInput} />
-				<br />
-				<EntrySubmission />
-			</form>
-		)
+		return <div>
+							<form onSubmit={this.sendAddData}>
+								<MoodDropDown getMood={this.getMood} dropText={'Select mood'} />
+								<br />
+								<TextArea default={''} getInput={this.getInput} />
+								<br />
+								<EntrySubmission />
+							</form>
+							<HomePageBtn text={'Cancel'} />
+						</div>
 	}
 }
 
 export default NewEntryForm;
-
-// TODO: get rid of container files
-// TODO: rely more on router!

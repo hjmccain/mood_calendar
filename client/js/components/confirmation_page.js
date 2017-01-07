@@ -1,8 +1,9 @@
 import React from 'react';
+import HomePageBtn from './home_page_btn';
 
 function ConfirmationPage () {
 	return (
-		<div>Yay u wrote a thing</div>
+		<div><HomePageBtn text={'Home'} /></div>
 	)
 }
 

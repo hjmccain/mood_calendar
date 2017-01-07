@@ -3,6 +3,7 @@ import { hashHistory } from 'react-router';
 import TextArea from './textarea';
 import MoodDropDown from './mood_drop_down';
 import EntrySubmission from './entry_submission';
+import HomePageBtn from './home_page_btn';
 
 class EditEntryForm extends React.Component {
 	constructor(props) {
@@ -19,12 +20,17 @@ class EditEntryForm extends React.Component {
 
 	sendEditData(e) {
 		e.preventDefault();
-		this.props.editEntry(this.props.id, this.state.textInput, this.state.moodInput);
+		if (!this.state.moodInput && !this.state.textInput) {
+			alert('No edits were made, but we\'ll save your original post!');
+			hashHistory.push('/confirmation');
+		} else if (!this.state.moodInput) {
+			this.props.editEntry(this.props.id, this.state.textInput, this.props.entry.mood)
+		} else if (!this.state.textInput) {
+			this.props.editEntry(this.props.id, this.props.entry.text, this.state.moodInput)
+		} else {
+			this.props.editEntry(this.props.id, this.state.textInput, this.state.moodInput)
+		}
 		hashHistory.push('/confirmation');
-	}
-
-	newMood () {
-
 	}
 
 	getInput(input) { this.setState({ textInput: input }) }
@@ -33,15 +39,18 @@ class EditEntryForm extends React.Component {
 
 	render () {
 		return (
-			<form onSubmit={this.sendEditData}>
-				<MoodDropDown selectedMood={this.props.entry.mood}
-					getMood={this.getMood} dropText={'Select mood'} />
-				<br />
-				<TextArea default={this.props.entry.text}
-					getInput={this.getInput}/>
-				<br />
-				<EntrySubmission />
-			</form>
+			<div>
+				<form onSubmit={this.sendEditData}>
+					<MoodDropDown selectedMood={this.props.entry.mood}
+						getMood={this.getMood} dropText={'Select mood'} />
+					<br />
+					<TextArea default={this.props.entry.text}
+						getInput={this.getInput}/>
+					<br />
+					<EntrySubmission />
+				</form>
+				<HomePageBtn text={'Cancel'} />
+			</div>
 		)
 	}
 }
