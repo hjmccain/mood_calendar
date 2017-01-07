@@ -13,9 +13,9 @@ import EditEntryContainer from './components/edit_entry_container';
 const routes = (
   <Provider store={store}>
 		<Router history={hashHistory}>
-      <Route path="/entries" component={RootContainer} />
-			<Route path="/entries/new_entry" component={NewEntryContainer} />
-			<Route path="/entries/:id" component={EditEntryContainer} />
+				<Route path="/entries" component={RootContainer} />
+				<Route path="/entries/new_entry" component={NewEntryContainer} />
+				<Route path="/entries/:id" component={EditEntryContainer} />
     </Router>
   </Provider>
 );
@@ -28,3 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 console.log(`Client running in ${process.env.NODE_ENV} mode`);
+
+/*{      }*/

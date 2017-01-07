@@ -20,26 +20,17 @@ class EditEntryForm extends React.Component {
 		this.props.editEntry(this.props.params.id, this.state.textInput, this.state.moodInput);
 	}
 
-	getInput(input) {
-		this.setState({ textInput: input });
-	}
+	getInput(input) { this.setState({ textInput: input }) }
 
-	getMood(mood) {
-		this.setState({ moodInput: mood });
-	}
+	getMood(mood) { this.setState({ moodInput: mood }) }
 
 	render () {
-		console.log(this.props);
-		const selectedEntry = this.props.entries.filter((entry) => {
-			return entry.id.toString() === this.props.params.id;
-		});
-
 		return (
 			<form onSubmit={this.sendEditData}>
-				<MoodDropDown selectedMood={selectedEntry[0].mood}
+				<MoodDropDown selectedMood={this.props.entry.mood}
 					getMood={this.getMood} dropText={'Select mood'} />
 				<br />
-				<TextArea default={selectedEntry[0].text}
+				<TextArea default={this.props.entry.text}
 					getInput={this.getInput}/>
 				<br />
 				<EntrySubmission />
