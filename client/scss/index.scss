@@ -1,0 +1,131 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+.welcome-container {
+	background-color: orange;
+
+	display: flex;
+}
+
+.welcome-child {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.welcome {
+	color: blue;
+	font-size: 25px;
+}
+
+.enter-btn {
+	background-color: pink;
+}
+
+.entries-container {
+	background-color: yellow;
+
+	display: flex;
+	flex-direction: column;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.header-bar {
+	background-color: orange;
+
+	display: flex;
+}
+
+.user-entry {
+	background-color: blue;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	width: 75%;
+	height: auto;
+}
+
+.entry-form {
+	background-color: orange;
+
+	display: flex;
+}
+
+.textarea, .submit-entry, .cancel-btn {
+	background-color: pink;
+}
+
+.router-link {
+	text-decoration: none;
+}
+
+.mood, .text, .date, .edit-menu {
+	background-color: orange;
+
+	display: block;
+	margin: 1% 1% 1% 1%;
+}
+
+.filter-btn, .mood-menu {
+	background-color: blue;
+}
+
+.new-entry-btn {
+	background-color: blue;
+
+	position: absolute;
+	right: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+	.welcome {
+		color: red;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

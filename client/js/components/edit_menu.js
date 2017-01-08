@@ -19,7 +19,7 @@ class EditMenu extends React.Component {
 
 	render() {
 		return <form id={this.props.id} onChange={this.selectionData}>
-							<select ref={input => this.selection = input}>
+							<select className={'edit-menu'} ref={input => this.selection = input}>
 								<option value="...">...</option>
 								<option value="edit">Edit</option>
 								<option value="delete">Delete</option>

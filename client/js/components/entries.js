@@ -19,7 +19,7 @@ const Entries = (props) => {
 				b = b.date;
 				return a > b ? -1 : a < b ? 1 : 0;
 			});
-			return <ul>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
+			return <ul className={'entries-container'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
 		}
 	} else {
 		return <div>Error: {props.error.error_info.message}</div>

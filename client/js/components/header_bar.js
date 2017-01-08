@@ -25,10 +25,10 @@ class HeaderBar extends React.Component {
 
 	render () {
 		return (
-			<div>
+			<div className={'header-bar'}>
+				<MoodDropDown getMood={this.getMood} dropText={'All moods'} />
+				<button className={'filter-btn'} type="submit" onClick={this.sendMoodData}>Filter</button>
 				<NewEntryBtn />
-				<MoodDropDown getMood={this.getMood} dropText={'All moods'}/>
-				<button type="submit" onClick={this.sendMoodData}>Filter</button>
 			</div>
 		)
 	}

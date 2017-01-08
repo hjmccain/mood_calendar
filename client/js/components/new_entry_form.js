@@ -33,7 +33,7 @@ class NewEntryForm extends React.Component {
 	getMood(mood) { this.setState({ moodInput: mood }) }
 
 	render () {
-		return <div>
+		return <div className={'entry-form'}>
 							<form onSubmit={this.sendAddData}>
 								<MoodDropDown getMood={this.getMood} dropText={'Select mood'} />
 								<br />
