@@ -3,16 +3,18 @@ import Entry from './entry';
 
 const Entries = (props) => {
 	let selectedEntries;
+	const { entries, error, selectedMood } = props;
 
-	if ((props.selectedMood === 'mood') || (!props.selectedMood)) {
-		selectedEntries = props.entries
+	if ((selectedMood === 'mood') || (!selectedMood)) {
+		selectedEntries = entries
 	} else {
-		selectedEntries = props.entries.filter((entry) => (entry.mood === props.selectedMood));
+		selectedEntries = entries.filter((entry) => (entry.mood === selectedMood));
 	}
 
-	if (!props.error.error_info) {
-		if (!props.entries) {
-			return <div>Error: entries did not load.</div>
+	if (!error.error_info) {
+		if (!entries) {
+			props.getEntries();
+			return <div></div>;
 		} else {
 			selectedEntries = selectedEntries.sort((a, b) => {
 				a = a.date;

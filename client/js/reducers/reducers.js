@@ -30,14 +30,11 @@ const entriesState = (state = {}, action) => {
 		case actions.GET_ENTRIES_SUCCESS:
 			return state = Object.assign({}, state, action.entries);
 		case actions.DELETE_ENTRY_SUCCESS:
-			console.log('state before', state);
 			const newState = state.entries.map((entry) => {
 				if (entry.id !== action.id) return entry;
 			}).filter((entry) => {
 				if (entry) return entry;
-			})
-			console.log('state after', newState);
-			// return state;
+			});
 			return state = Object.assign({}, newState);
 		default:
 			return state;

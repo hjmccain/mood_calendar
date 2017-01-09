@@ -4,13 +4,14 @@ import * as actions from '../actions/entries_async_actions';
 import EditEntryForm from './edit_entry_form';
 
 const EditEntryContainer = (props) => {
+	const { entries, getEntries, editEntry, params } = props;
 
-	if (!props.entries) {
-		props.getEntries();
+	if (!entries) {
+		getEntries();
 		return <div></div>;
 	} else {
-		const entry = props.entries.filter((entry) => entry.id.toString() === props.params.id);
-		return <EditEntryForm entry={entry[0]} editEntry={props.editEntry} id={props.params.id}/>
+		const entry = entries.filter((entry) => entry.id.toString() === params.id);
+		return <EditEntryForm entry={entry[0]} editEntry={editEntry} id={params.id}/>
 	}
 
 }

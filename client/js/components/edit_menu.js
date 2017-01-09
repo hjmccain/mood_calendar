@@ -9,10 +9,9 @@ class EditMenu extends React.Component {
 
 	selectionData(e) {
 		e.preventDefault();
-		const { id, getEntries, deleteEntry } = this.props;
+		const { id, deleteEntry } = this.props;
 		if (this.selection.value === 'delete') {
 			deleteEntry(id);
-			this.props.entries;
 		} else if (this.selection.value === 'edit') {
 			hashHistory.push('/entries/' + this.props.id);
 		}
