@@ -12,7 +12,7 @@ const Entries = (props) => {
 
 	if (!props.error.error_info) {
 		if (!props.entries) {
-			return <div>Loading...</div>
+			return <div>Error: entries did not load.</div>
 		} else {
 			selectedEntries = selectedEntries.sort((a, b) => {
 				a = a.date;

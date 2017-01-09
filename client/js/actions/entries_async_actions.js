@@ -17,7 +17,7 @@ export const deleteEntry = (id) => dispatch => {
 			throw new Error(res.statusText);
 		}
 	}).then(() => {
-		dispatch(actions.getEntriesSuccess());
+		dispatch(actions.deleteEntrySuccess(id));
 	}).catch(err => {
 		dispatch(actions.getEntriesError(err));
 	});

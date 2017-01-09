@@ -9,9 +9,11 @@ X Add cancel edit/cancel add button
 X Add welcome page
 
 v2:
+- Update actions so that they actually modify the state ;)
 - Add multiple users capability
 - Add edit tracking
 - Register returns/tabs when rendering entries from db
 - Add calendar view
-- Change date format
+- Change date format // use moment module
 - Filter by date
+- TESTING!

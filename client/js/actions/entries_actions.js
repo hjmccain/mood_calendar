@@ -12,6 +12,12 @@ export const getEntriesError = error => ({
 	error
 });
 
+export const DELETE_ENTRY_SUCCESS = 'DELETE_ENTRY_SUCCESS';
+export const deleteEntrySuccess = id => ({
+	type: DELETE_ENTRY_SUCCESS,
+	id
+})
+
 // OTHER
 
 export const SAVE_USER_INPUT = 'SAVE_USER_INPUT';

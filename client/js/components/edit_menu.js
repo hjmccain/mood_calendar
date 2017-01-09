@@ -1,5 +1,5 @@
 import React from 'react';
-import {hashHistory} from 'react-router';
+import { hashHistory } from 'react-router';
 
 class EditMenu extends React.Component {
 	constructor(props) {
@@ -9,9 +9,10 @@ class EditMenu extends React.Component {
 
 	selectionData(e) {
 		e.preventDefault();
+		const { id, getEntries, deleteEntry } = this.props;
 		if (this.selection.value === 'delete') {
-			this.props.deleteEntry(this.props.id);
-			this.props.getEntries();
+			deleteEntry(id);
+			this.props.entries;
 		} else if (this.selection.value === 'edit') {
 			hashHistory.push('/entries/' + this.props.id);
 		}

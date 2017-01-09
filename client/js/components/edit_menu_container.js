@@ -4,7 +4,8 @@ import * as actions from '../actions/entries_async_actions';
 import EditMenu from './edit_menu';
 
 const mapStateToProps = (state, ownProps) => ({
-	id: ownProps.id
+	id: ownProps.id,
+	entries: state.entriesState.entries
 });
 
 const mapDispatchToProps = (dispatch) => {
