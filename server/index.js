@@ -33,7 +33,7 @@ app.post('/db-entries', (req, res) => {
 		text: req.body.text,
 		date: req.body.date,
 		mood: req.body.mood,
-		user_id: 1
+		user_id: req.body.user_id
 	}).into('entries').then(() => {
 		return res.status(201).json({})
 	}).catch(e => {

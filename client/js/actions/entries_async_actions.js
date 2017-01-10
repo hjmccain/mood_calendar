@@ -19,20 +19,22 @@ export const deleteEntry = (id) => dispatch => {
 	}).then(() => {
 		dispatch(actions.deleteEntrySuccess(id));
 	}).catch(err => {
-		dispatch(actions.getEntriesError(err));
+		dispatch(actions.accessEntriesError(err));
 	});
 }
 
 // TODO: add user ID input when user component is added
 export const addEntry = (text, mood) => dispatch => {
+	const entryBody = {
+		text: text,
+		date: new Date(),
+		mood: mood,
+		user_id: 1
+	}
 	return fetch(entries_url,
 		{
 			method: "POST",
-			body: JSON.stringify({
-				text: text,
-				date: new Date(),
-				mood: mood
-			}),
+			body: JSON.stringify(entryBody),
 			headers: {"Content-Type": "application/json"}
 		}
 	).then(res => {
@@ -40,23 +42,22 @@ export const addEntry = (text, mood) => dispatch => {
 			throw new Error(res.statusText);
 		}
 		return res.json();
-	}).then(res => {
-		dispatch(actions.getEntriesSuccess(res));
-	}).catch(err => {
-		dispatch(actions.getEntriesError(err));
+	}).then(() => {}).catch(err => {
+		dispatch(actions.accessEntriesError(err));
 	});
 }
 
 // TODO: add user ID input when user component is added
 export const editEntry = (id, text, mood) => dispatch => {
+	const editBody = {
+		id: id,
+		text: text,
+		mood: mood
+	}
 	return fetch(entries_url,
 		{
 			method: "PUT",
-			body: JSON.stringify({
-				id: id,
-				text: text,
-				mood: mood
-			}),
+			body: JSON.stringify(editBody),
 			headers: {"Content-Type": "application/json"}
 		}
 	).then(res => {
@@ -67,7 +68,7 @@ export const editEntry = (id, text, mood) => dispatch => {
 	}).then(res => {
 		dispatch(actions.getEntriesSuccess(res));
 	}).catch(err => {
-		dispatch(actions.getEntriesError(err));
+		dispatch(actions.accessEntriesError(err));
 	});
 }
 
@@ -81,6 +82,6 @@ export const getEntries = () => dispatch => {
 		}).then(res => {
 			dispatch(actions.getEntriesSuccess(res));
 		}).catch(err => {
-			dispatch(actions.getEntriesError(err));
+			dispatch(actions.accessEntriesError(err));
 		});
 }

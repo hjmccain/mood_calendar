@@ -6,9 +6,9 @@ export const getEntriesSuccess = entries => ({
 	entries
 });
 
-export const GET_ENTRIES_ERROR = 'GET_ENTRIES_ERROR';
-export const getEntriesError = error => ({
-	type: GET_ENTRIES_ERROR,
+export const ACCESS_ENTRIES_ERROR = 'ACCESS_ENTRIES_ERROR';
+export const accessEntriesError = error => ({
+	type: ACCESS_ENTRIES_ERROR,
 	error
 });
 

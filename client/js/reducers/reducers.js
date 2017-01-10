@@ -9,7 +9,7 @@ const stateInfo = (state = {}, action) => {
 	switch (action.type) {
 		case actions.SELECT_MOOD:
 			return state = Object.assign({}, state, { selected_mood: action.mood });
-		case actions.GET_ENTRIES_ERROR:
+		case actions.ACCESS_ENTRIES_ERROR:
 			return state = Object.assign({}, state, { error: true, error_info: action.error });
 		default:
 			return state;

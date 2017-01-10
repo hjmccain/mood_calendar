@@ -18,15 +18,17 @@ class EditEntryForm extends React.Component {
 	}
 
 	sendEditData(e) {
+		const { moodInput, textInput } = this.state;
+		const { entry, id, editEntry } = this.props;
 		e.preventDefault();
-		if (!this.state.moodInput && !this.state.textInput) {
+		if (!moodInput && !textInput) {
 			alert('No edits were made, but we\'ll save your original post!');
-		} else if (!this.state.moodInput) {
-			this.props.editEntry(this.props.id, this.state.textInput, this.props.entry.mood)
-		} else if (!this.state.textInput) {
-			this.props.editEntry(this.props.id, this.props.entry.text, this.state.moodInput)
+		} else if (!moodInput) {
+			editEntry(id, textInput, entry.mood)
+		} else if (!textInput) {
+			editEntry(id, entry.text, moodInput)
 		} else {
-			this.props.editEntry(this.props.id, this.state.textInput, this.state.moodInput)
+			editEntry(id, textInput, moodInput)
 		}
 		hashHistory.push('/confirmation');
 	}
