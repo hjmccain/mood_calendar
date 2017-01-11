@@ -1,3 +1,9 @@
+// font-family: 'Karma', serif;
+// font-family: 'Pacifico', cursive;
+// font-family: 'Hind Madurai', sans-serif;
+// light purple/gray: #e6e6fa
+// bright red: 	#ff4040
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,6 +24,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	box-sizing: border-box;
+	font-family: 'Hind Madurai', sans-serif;
+	background-color: #e6e6fa;
 }
 
 ol, ul {
@@ -25,23 +33,30 @@ ol, ul {
 }
 
 .welcome-container {
-	background-color: orange;
-
+	width: auto;
+	height: 75vh;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .welcome-child {
-	margin-left: auto;
-	margin-right: auto;
+	text-align: center;
 }
 
 .welcome {
-	color: blue;
-	font-size: 25px;
+	color: 	#ff4040;
+	font-family: 'Pacifico', cursive;
+	font-size: 6em;
+
+	display: block;
+	padding: 10% 10% 10% 10%;
 }
 
 .enter-btn {
-	background-color: pink;
+	background-color: #cfcfe1;
+
+	margin-bottom: 10%;
 }
 
 .entries-container {
@@ -85,6 +100,10 @@ ol, ul {
 	text-decoration: none;
 }
 
+.text {
+	font-family: 'Karma', serif;
+}
+
 .mood, .text, .date, .edit-menu {
 	background-color: orange;
 
@@ -105,7 +124,15 @@ ol, ul {
 
 @media only screen and (max-width: 800px) {
 	.welcome {
-		color: red;
+		color: 	#ff4040;
+		font-family: 'Pacifico', cursive;
+		font-size: 4em;
+
+		display: block;
+		padding: 10% 10% 10% 10%;
+
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

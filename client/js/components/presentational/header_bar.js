@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../actions/entries_actions';
 import NewEntryBtn from './new_entry_btn';
 import MoodDropDown from './mood_drop_down';
 
@@ -26,6 +24,7 @@ class HeaderBar extends React.Component {
 	render () {
 		return (
 			<div className={'header-bar'}>
+				<h3 className={'welcome'}>Moodoo</h3>
 				<MoodDropDown getMood={this.getMood} dropText={'All moods'} />
 				<button className={'filter-btn'} type="submit" onClick={this.sendMoodData}>Filter</button>
 				<NewEntryBtn />
@@ -34,11 +33,4 @@ class HeaderBar extends React.Component {
 	}
 }
 
-const mapStateToProps = () => ({})
-const mapDispatchToProps = (dispatch) => {
-	return {
-		selectMood: (mood) => { dispatch(actions.selectMood(mood)) }
-	}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderBar);
+export default HeaderBar;

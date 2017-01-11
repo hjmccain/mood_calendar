@@ -65,9 +65,7 @@ export const editEntry = (id, text, mood) => dispatch => {
 			throw new Error(res.statusText);
 		}
 		return res.json();
-	}).then(res => {
-		dispatch(actions.getEntriesSuccess(res));
-	}).catch(err => {
+	}).then(() => {}).catch(err => {
 		dispatch(actions.accessEntriesError(err));
 	});
 }

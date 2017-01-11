@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions/entries_async_actions';
-import NewEntryForm from './new_entry_form';
+import * as actions from '../../actions/entries_async_actions';
+import NewEntryForm from '../presentational/new_entry_form';
 
 const mapStateToProps = (state) => ({});
 

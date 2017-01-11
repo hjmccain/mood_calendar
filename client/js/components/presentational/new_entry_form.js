@@ -19,12 +19,13 @@ class NewEntryForm extends React.Component {
 
 	sendAddData(e) {
 		e.preventDefault();
-		if (!this.state.textInput) {
+		const { textInput, moodInput } = this.state;
+		if (!textInput) {
 			alert('You didn\'t write anything! Jot down some feelings, or you can cancel.')
-		} else if (!this.state.moodInput) {
+		} else if (!moodInput) {
 			alert('How are you feeling? Choose a mood, then try submitting again.')
 		} else {
-			this.props.postNewEntry(this.state.textInput, this.state.moodInput);
+			this.props.postNewEntry(textInput, moodInput);
 			hashHistory.push('/confirmation');
 		}
 	}

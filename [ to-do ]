@@ -9,7 +9,8 @@ X Add cancel edit/cancel add button
 X Add welcome page
 
 v2:
-- Update actions so that they actually modify the state ;)
+X Update actions
+X Make container/presentation separations consistent (e.g. header bar)
 - Add multiple users capability
 - Add edit tracking
 - Register returns/tabs when rendering entries from db
@@ -17,3 +18,7 @@ v2:
 - Change date format // use moment module
 - Filter by date
 - TESTING!
+
+v3:
+- Infinite scroll
+- Optimize/analyze store/db connection

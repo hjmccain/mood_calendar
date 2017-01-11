@@ -1,9 +1,9 @@
 import React from 'react';
-import EditMenuContainer from './edit_menu_container';
+import EditMenuContainer from '../container/edit_menu_container';
 
 function Entry (props) {
-
-	return	<li className={'user-entry'} id={props.entry.id} onMouseOver={props.onMouseOver}>
+	const classes = `user-entry ${props.entry.mood}`
+	return	<li className={classes} id={props.entry.id} onMouseOver={props.onMouseOver}>
 						<EditMenuContainer id={props.entry.id} />
 						<h3 className={'mood'}>{props.entry.mood}</h3>
 						<p className={'text'}>{props.entry.text}</p>

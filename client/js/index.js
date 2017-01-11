@@ -5,12 +5,12 @@ import { Router, Route, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 
 import store from './store';
-import RootContainer from './components/root_container';
-import EntriesContainer from './components/entries_container';
-import NewEntryContainer from './components/new_entry_container';
-import EditEntryContainer from './components/edit_entry_container';
-import ConfirmationPage from './components/confirmation_page';
-import WelcomePage from './components/welcome_page';
+import RootContainer from './components/container/root_container';
+import EntriesContainer from './components/container/entries_container';
+import NewEntryContainer from './components/container/new_entry_container';
+import EditEntryContainer from './components/container/edit_entry_container';
+import ConfirmationPage from './components/presentational/confirmation_page';
+import WelcomePage from './components/presentational/welcome_page';
 
 const routes = (
   <Provider store={store}>
