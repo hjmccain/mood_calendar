@@ -1,66 +1,35 @@
-// font-family: 'Karma', serif;
-// font-family: 'Pacifico', cursive;
-// font-family: 'Hind Madurai', sans-serif;
-// light purple/gray: #e6e6fa
-// bright red: 	#ff4040
+@import 'reset';
+@import 'welcome';
+@import 'header';
+@import 'entry_colors';
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	box-sizing: border-box;
-	font-family: 'Hind Madurai', sans-serif;
+// $serif: 'Karma', serif;
+$logo: 'Pacifico', cursive;
+$sans-serif: 'Quicksand', sans-serif;
+$light-purple: #e6e6fa;
+$hover-purple: #cfcfe1;
+$bright-red: #ff4040;
+$red-highlight: #ff8181;
+
+body {
 	background-color: #e6e6fa;
 }
 
-ol, ul {
-	list-style: none;
+.entries-div.user-entry {
+	background-color: #e6e6fa;
 }
 
-.welcome-container {
-	width: auto;
-	height: 75vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.welcome-child {
-	text-align: center;
-}
-
-.welcome {
-	color: 	#ff4040;
-	font-family: 'Pacifico', cursive;
-	font-size: 6em;
-
+.text, .edit-menu {
 	display: block;
-	padding: 10% 10% 10% 10%;
+	margin: 1% 1% 1% 1%;
 }
 
-.enter-btn {
-	background-color: #cfcfe1;
-
-	margin-bottom: 10%;
+.mood {
+	margin: 1% 0% 1% 1%;
 }
 
 .entries-container {
-	background-color: yellow;
+	background-color: #e6e6fa;
 
 	display: flex;
 	flex-direction: column;
@@ -68,23 +37,51 @@ ol, ul {
 	padding-bottom: 1%;
 }
 
-.header-bar {
-	background-color: orange;
-
-	display: flex;
+.user-entry {
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.user-entry {
-	background-color: blue;
-
+.user-entry, .new-entry {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 	width: 75%;
+	max-width: 900px;
 	height: auto;
 }
+
+.new-entry {
+	margin-top: 3%;
+}
+
+.new-entry-btn {
+	background-color: rgba(207, 207, 225, .5);;
+	font-family: 'Quicksand', sans-serif;
+	padding: 8px 8px 8px 8px;
+	border: 1px solid $hover-purple;
+}
+
+.new-entry-btn:hover {
+	background-color: $hover-purple;
+	padding: 8px 8px 8px 8px;
+	border: 1px solid $hover-purple;
+}
+
+.mood, .text, .date, .user-entry, .edit-menu {
+	padding: 1% 1% 1% 1%;
+}
+
+.moodAndDate {
+	font-family: $sans-serif;
+}
+
+//////////////////////////
+
+// .new-entry-form {
+// 	display: block;
+// 	margin-left: 13.3%;
+// }
 
 .entry-form {
 	background-color: orange;
@@ -102,38 +99,6 @@ ol, ul {
 
 .text {
 	font-family: 'Karma', serif;
-}
-
-.mood, .text, .date, .edit-menu {
-	background-color: orange;
-
-	display: block;
-	margin: 1% 1% 1% 1%;
-}
-
-.filter-btn, .mood-menu {
-	background-color: blue;
-}
-
-.new-entry-btn {
-	background-color: blue;
-
-	position: absolute;
-	right: 0px;
-}
-
-@media only screen and (max-width: 800px) {
-	.welcome {
-		color: 	#ff4040;
-		font-family: 'Pacifico', cursive;
-		font-size: 4em;
-
-		display: block;
-		padding: 10% 10% 10% 10%;
-
-		margin-left: auto;
-		margin-right: auto;
-	}
 }
 
 

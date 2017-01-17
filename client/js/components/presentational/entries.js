@@ -1,5 +1,6 @@
 import React from 'react';
 import Entry from './entry';
+import NewEntryBtn from './new_entry_btn';
 
 const Entries = (props) => {
 	let selectedEntries;
@@ -21,7 +22,10 @@ const Entries = (props) => {
 				b = b.date;
 				return a > b ? -1 : a < b ? 1 : 0;
 			});
-			return <ul className={'entries-container'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
+			return 	<div className={'entries-div'}>
+								<ul><li className='new-entry'><NewEntryBtn /></li></ul>
+								<ul className={'entries-container'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
+							</div>
 		}
 	} else {
 		return <div>Error: {props.error.error_info.message}</div>

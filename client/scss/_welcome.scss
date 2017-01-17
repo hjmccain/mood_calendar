@@ -1,0 +1,68 @@
+// $serif: 'Karma', serif;
+$logo: 'Pacifico', cursive;
+// $sans-serif: 'Hind Madurai', sans-serif;
+// $light-purple: #e6e6fa;
+// $bright-red: #ff4040;
+$red-highlight: #ff8181;
+
+.welcome-container {
+	width: auto;
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.welcome-child {
+	text-align: center;
+	width: auto;
+	margin: 0 auto;
+}
+
+.welcome {
+	color: #ff4040;
+	font-family: 'Pacifico', cursive;
+	font-size: 6em;
+	cursor: default;
+	display: inline-block;
+	padding-bottom: 10%;
+	margin-bottom: 0%;
+}
+
+.enter-btn {
+	// colors
+	background-color: #ff4040;
+	color: #f4f4f4;
+	// text
+	text-decoration: none;
+	font-family: $logo;
+	font-size: 1.5em;
+	// box
+	display: block;
+	border: 1.5px solid $red-highlight;
+	padding: 4% 10% 4% 10%;
+	margin-bottom: 10%;
+	margin: 0 auto;
+	// other
+	cursor: pointer;
+}
+
+.enter-btn:hover {
+	background-color: #e6e6fa;
+	color: #ff4040;
+	border: 1.5px solid #ff4040;
+}
+
+@media only screen and (max-width: 800px) {
+	.welcome {
+		color: 	#ff4040;
+		font-family: 'Pacifico', cursive;
+		font-size: 4em;
+
+		display: block;
+		padding: 10% 10% 10% 10%;
+
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

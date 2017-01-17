@@ -1,13 +1,20 @@
 import React from 'react';
 import EditMenuContainer from '../container/edit_menu_container';
+import moment from 'moment';
 
 function Entry (props) {
-	const classes = `user-entry ${props.entry.mood}`
-	return	<li className={classes} id={props.entry.id} onMouseOver={props.onMouseOver}>
-						<EditMenuContainer id={props.entry.id} />
-						<h3 className={'mood'}>{props.entry.mood}</h3>
-						<p className={'text'}>{props.entry.text}</p>
-						<p className={'date'}>{props.entry.date}</p>
+	const { mood, id, text, date } = props.entry;
+
+	const liClass = `user-entry ${mood}`;
+	const capMood = mood.charAt(0).toUpperCase() + mood.slice(1)
+	return	<li className={liClass} id={id} onMouseOver={props.onMouseOver}>
+						<EditMenuContainer id={id} mood={mood}/>
+						<p className={'text'}>{text}</p>
+						<p className={'moodAndDate'}>
+							<span className={'mood'}>{capMood}</span>
+							on
+							<span className={'date'}>{moment(date).format('MMMM D, YYYY')}</span>
+						</p>
 					</li>
 }
 

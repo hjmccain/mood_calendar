@@ -1,0 +1,74 @@
+$light-purple: #e6e6fa;
+$hover-purple: #cfcfe1;
+$bright-red: #ff4040;
+$red-highlight: #ff8181;
+$happy: rgba(251, 208, 225, .5);
+$excited: rgba(255, 209, 6, .4);
+$awkward: rgba(8, 159, 118, .3);
+$ambivalent: rgba(152, 168, 158, .3);
+$bored: rgba(135, 167, 248, .5);
+$sad: rgba(170, 179, 255, .4);
+$depressed: rgba(80, 197, 214, .3);
+$happy-bold: rgba(251, 208, 225, 1);
+$excited-bold: rgba(255, 209, 6, 1);
+$awkward-bold: rgba(8, 159, 118, 1);
+$ambivalent-bold: rgba(152, 168, 158, 1);
+$bored-bold: rgba(135, 167, 248, 1);
+$sad-bold: rgba(170, 179, 255, 1);
+$depressed-bold: rgba(80, 197, 214, 1);
+
+.happy.user-entry {
+	background-color: $happy;
+}
+
+.happy {
+	background-color: $happy-bold;
+}
+
+.excited.user-entry {
+	background-color: $excited;
+}
+
+.excited {
+	background-color: $excited-bold;
+}
+
+.awkward.user-entry {
+	background-color: $awkward;
+}
+
+.awkward {
+	background-color: $awkward-bold;
+}
+
+.ambivalent.user-entry {
+	background-color: $ambivalent;
+}
+
+.ambivalent {
+	background-color: $ambivalent-bold;
+}
+
+.bored.user-entry {
+	background-color: $bored;
+}
+
+.bored {
+	background-color: $bored-bold;
+}
+
+.sad.user-entry {
+	background-color: $sad;
+}
+
+.sad {
+	background-color: $sad-bold;
+}
+
+.depressed.user-entry {
+	background-color: $depressed;
+}
+
+.depressed {
+	background-color: $depressed-bold;
+}

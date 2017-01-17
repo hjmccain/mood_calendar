@@ -1,0 +1,50 @@
+// $serif: 'Karma', serif;
+$logo: 'Pacifico', cursive;
+// $sans-serif: 'Quicksand', sans-serif;
+$light-purple: #e6e6fa;
+$hover-purple: #cfcfe1;
+// $bright-red: #ff4040;
+$red-highlight: #ff8181;
+$almost-white: #F4F4F4;
+
+.header-bar {
+	background-color: $almost-white;
+	padding-left: 50px;
+	padding-bottom: 20px;
+}
+
+.moodoo {
+	color: #ff4040;
+	max-width: 116px;
+
+	font-family: 'Pacifico', cursive;
+	font-size: 2em;
+
+	display: inline-block;
+	padding: 1% 1% 1.5% 0%;
+	margin: 3% 0% 0% 0%;
+
+	cursor: pointer;
+}
+
+.filter-btn, .mood-menu {
+	background-color: $almost-white;
+	font-family: 'Quicksand', sans-serif;
+	padding: 0px 0px 0px 0px;
+	margin: 0% 0% 2% 2%;
+}
+
+.filter-btn {
+	padding: 8px 8px 8px 8px;
+	margin: 0% 0% 1% 1%;
+}
+
+.mood-menu {
+	padding: 8px 0px 8px 8px;
+	margin: 0% 0% 1% 1%;
+}
+
+.filter-btn:hover, .mood-menu:hover {
+	background-color: $hover-purple;
+	border: none;
+}

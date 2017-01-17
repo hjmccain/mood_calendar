@@ -1,10 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router';
+import { hashHistory } from 'react-router';
 
 function NewEntryBtn () {
-	return <form>
-						<button className={'new-entry-btn'} type="submit">
-							<Link className={'router-link'} to={'/new_entry'}>New Entry</Link>
+	function routeLink() {
+		hashHistory.push('/new_entry');
+	}
+
+	return <form className={'new-entry-form'}>
+						<button className={'new-entry-btn'} type="submit" onClick={routeLink}>
+							New Entry
 						</button>
 					</form>
 }

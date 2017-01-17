@@ -19,6 +19,9 @@ X Make container/presentation separations consistent (e.g. header bar)
 - Filter by date
 - TESTING!
 
+Bugs:
+- mapStateToProps not working in header container / header bar
+
 v3:
 - Infinite scroll
 - Optimize/analyze store/db connection

@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { hashHistory } from 'react-router';
 
 function WelcomePage () {
+	const callLink = () => {
+		hashHistory.push('/entries');
+	}
 	return 	<div className={'welcome-container'}>
 						<div className={'welcome-child'}>
 							<h3 className={'welcome'}>Moodoo</h3>
-							<button className={'enter-btn'}><Link className={'router-link'} to={'/entries'}>Enter</Link></button>
+							<button onClick={callLink} className={'enter-btn'}>Enter</button>
 						</div>
 					</div>
 }

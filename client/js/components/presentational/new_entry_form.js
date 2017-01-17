@@ -25,6 +25,7 @@ class NewEntryForm extends React.Component {
 		} else if (!moodInput) {
 			alert('How are you feeling? Choose a mood, then try submitting again.')
 		} else {
+			console.log(this.props);
 			this.props.postNewEntry(textInput, moodInput);
 			hashHistory.push('/confirmation');
 		}

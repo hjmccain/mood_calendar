@@ -1,4 +1,5 @@
 import * as actions from './entries_actions';
+import moment from 'moment';
 
 const users_url = "/db-users";
 const entries_url = "/db-entries";
@@ -27,7 +28,7 @@ export const deleteEntry = (id) => dispatch => {
 export const addEntry = (text, mood) => dispatch => {
 	const entryBody = {
 		text: text,
-		date: new Date(),
+		date: moment(),
 		mood: mood,
 		user_id: 1
 	}
