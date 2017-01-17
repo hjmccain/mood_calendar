@@ -9,8 +9,8 @@ $almost-white: #F4F4F4;
 
 .header-bar {
 	background-color: $almost-white;
-	padding-left: 50px;
-	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-bottom: 12px;
 }
 
 .moodoo {
@@ -20,9 +20,9 @@ $almost-white: #F4F4F4;
 	font-family: 'Pacifico', cursive;
 	font-size: 2em;
 
-	display: inline-block;
-	padding: 1% 1% 1.5% 0%;
-	margin: 3% 0% 0% 0%;
+	display: block;
+	padding: 2% 2% 2% 2%;
+	margin: 0% 0% 0% 0%;
 
 	cursor: pointer;
 }
@@ -31,17 +31,18 @@ $almost-white: #F4F4F4;
 	background-color: $almost-white;
 	font-family: 'Quicksand', sans-serif;
 	padding: 0px 0px 0px 0px;
-	margin: 0% 0% 2% 2%;
+	margin: 0% 0% 0% 2%;
 }
 
 .filter-btn {
 	padding: 8px 8px 8px 8px;
-	margin: 0% 0% 1% 1%;
+	margin: 0% 0% 0% 1%;
 }
 
 .mood-menu {
+	width: 108px;
 	padding: 8px 0px 8px 8px;
-	margin: 0% 0% 1% 1%;
+	margin: 0% 0% 0% 1%;
 }
 
 .filter-btn:hover, .mood-menu:hover {

@@ -12,7 +12,7 @@ class DateDropDown extends React.Component {
 								<option value="this_month">This month</option>
 								<option value="last_month">Last month</option>
 								<option value="this_year">This year</option>
-								<option value="Previous years">Previous years</option>
+								<option value="Previous years">Previous yrs</option>
 						</select>
 	}
 }
