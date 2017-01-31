@@ -3,14 +3,13 @@ $logo: 'Pacifico', cursive;
 // $sans-serif: 'Quicksand', sans-serif;
 $light-purple: #e6e6fa;
 $hover-purple: #cfcfe1;
-// $bright-red: #ff4040;
+$bright-red: #ff4040;
 $red-highlight: #ff8181;
 $almost-white: #F4F4F4;
 
 .header-bar {
-	background-color: $almost-white;
+	background-color: $light-purple;
 	padding-left: 30px;
-	padding-bottom: 12px;
 }
 
 .moodoo {
@@ -25,27 +24,4 @@ $almost-white: #F4F4F4;
 	margin: 0% 0% 0% 0%;
 
 	cursor: pointer;
-}
-
-.filter-btn, .mood-menu {
-	background-color: $almost-white;
-	font-family: 'Quicksand', sans-serif;
-	padding: 0px 0px 0px 0px;
-	margin: 0% 0% 0% 2%;
-}
-
-.filter-btn {
-	padding: 8px 8px 8px 8px;
-	margin: 0% 0% 0% 1%;
-}
-
-.mood-menu {
-	width: 108px;
-	padding: 8px 0px 8px 8px;
-	margin: 0% 0% 0% 1%;
-}
-
-.filter-btn:hover, .mood-menu:hover {
-	background-color: $hover-purple;
-	border: none;
 }

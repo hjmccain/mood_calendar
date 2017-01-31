@@ -33,9 +33,6 @@ class HeaderBar extends React.Component {
 		return (
 			<div className={'header-bar'}>
 				<h3 onClick={this.callLink} className={'moodoo'}>Moodoo</h3>
-				<MoodDropDown getMood={this.getMood} dropText={'All moods'} />
-				<DateDropDown />
-				<button className={'filter-btn'} type="submit" onClick={this.sendMoodData}>Filter</button>
 			</div>
 		)
 	}
