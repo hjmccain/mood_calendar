@@ -1,9 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { hashHistory } from 'react-router';
 import RootContainer from '../container/root_container';
 
 function HomePageBtn (props) {
-	return <button className={'cancel-btn'}><Link className={'router-link'} to='/entries'>{props.text}</Link></button>
+
+	const callLink = (e) => {
+		hashHistory.push('/entries');
+	}
+
+	return (
+		<button className={'cancel-btn'} onClick={callLink}>
+			{props.text}
+		</button>
+	)
 }
 
 export default HomePageBtn;

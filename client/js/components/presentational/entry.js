@@ -7,6 +7,7 @@ function Entry (props) {
 
 	const liClass = `user-entry ${mood}`;
 	const capMood = mood.charAt(0).toUpperCase() + mood.slice(1)
+
 	return	<li className={liClass} id={id} onMouseOver={props.onMouseOver}>
 						<EditMenuContainer id={id} mood={mood}/>
 						<p className={'text'}>{text}</p>

@@ -45,6 +45,10 @@ button::-moz-focus-inner{
 	cursor: default;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /**

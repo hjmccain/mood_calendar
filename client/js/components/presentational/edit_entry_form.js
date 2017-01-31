@@ -1,5 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
+import HeaderBar from './header_bar';
 import TextArea from './textarea';
 import MoodDropDown from './mood_drop_down';
 import EntrySubmission from './entry_submission';
@@ -37,16 +38,23 @@ class EditEntryForm extends React.Component {
 	getMood(mood) { this.setState({ moodInput: mood }) }
 
 	render () {
-		return <div className={'entry-form'}>
-						<form onSubmit={this.sendEditData}>
+		return (
+			<div>
+				<HeaderBar />
+				<div className={'entry-form'}>
+					<form onSubmit={this.sendEditData}>
+						<div className="new-entry-top">
 							<MoodDropDown selectedMood={this.props.entry.mood} getMood={this.getMood} dropText={'Select mood'} />
-							<br />
-							<TextArea default={this.props.entry.text} getInput={this.getInput}/>
-							<br />
-							<EntrySubmission />
-						</form>
-						<HomePageBtn text={'Cancel'} />
-					</div>
+						</div>
+						<br />
+						<TextArea default={this.props.entry.text} getInput={this.getInput}/>
+						<br />
+						<EntrySubmission />
+					</form>
+					<HomePageBtn text={'Cancel'} />
+				</div>
+			</div>
+		)
 	}
 }
 
