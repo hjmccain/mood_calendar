@@ -2,12 +2,13 @@ import React from 'react';
 
 class MoodDropDown extends React.Component {
 	constructor(props) {
+		console.log('mood drop down', props);
 		super(props);
 		this.sendMood = this.sendMood.bind(this);
 	}
 
 	sendMood(e) {
-		this.props.getMood(this.moodInput.value);
+		this.props.selectMood(this.moodInput.value);
 	}
 
 	render () {
