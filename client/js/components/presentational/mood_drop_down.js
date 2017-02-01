@@ -11,6 +11,7 @@ class MoodDropDown extends React.Component {
 
 	sendMood(e) {
 		this.props.selectMood(this.moodInput.value);
+		this.props.getMood(this.moodInput.value);
 	}
 
 	render () {

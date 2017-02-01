@@ -7,18 +7,20 @@ import DateDropDown from './date_drop_down';
 const Entries = (props) => {
 	let selectedEntries;
 	const { entries, error, selectedMood } = props;
-
-	if ((selectedMood === 'All moods') || (!selectedMood)) {
-		selectedEntries = entries
-	} else {
-		selectedEntries = entries.filter((entry) => (entry.mood === selectedMood));
-	}
+	console.log('selected mood', props.selectedMood)
 
 	if (!error.error_info) {
 		if (!entries) {
 			props.getEntries();
 			return <div></div>;
 		} else {
+
+			if ((selectedMood === 'mood') || (!selectedMood)) {
+				selectedEntries = entries
+			} else {
+				selectedEntries = entries.filter((entry) => (entry.mood === selectedMood));
+			}
+
 			selectedEntries = selectedEntries.sort((a, b) => {
 				a = a.date;
 				b = b.date;
