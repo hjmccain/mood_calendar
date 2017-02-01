@@ -8,7 +8,7 @@ const Entries = (props) => {
 	let selectedEntries;
 	const { entries, error, selectedMood } = props;
 
-	if ((selectedMood === 'mood') || (!selectedMood)) {
+	if ((selectedMood === 'All moods') || (!selectedMood)) {
 		selectedEntries = entries
 	} else {
 		selectedEntries = entries.filter((entry) => (entry.mood === selectedMood));
