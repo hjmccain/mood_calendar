@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/entries_actions';
 
 class MoodDropDown extends React.Component {
 	constructor(props) {
@@ -28,4 +30,14 @@ class MoodDropDown extends React.Component {
 	}
 }
 
-export default MoodDropDown;
+const mapStateToProps = () => ({});
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		selectMood: (mood) => { dispatch(actions.selectMood(mood)) }
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MoodDropDown);
+
+// export default MoodDropDown;
