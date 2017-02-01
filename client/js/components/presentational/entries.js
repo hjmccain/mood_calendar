@@ -29,8 +29,6 @@ const Entries = (props) => {
 									<li className='new-entry'>
 										<NewEntryBtn />
 										<MoodDropDown dropText={'All moods'} />
-										<DateDropDown />
-										<button className={'filter-btn'} type="submit">Filter</button>
 									</li>
 								</ul>
 								<ul className={'entries-container'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
