@@ -4,7 +4,7 @@
 
 ### About Moodoo
 
-Moodoo is v1 of a journaling app for mood tracking. Whether you're looking to map out the things that excite and frustrate you, working to identify triggers related to mental health issues, trying to make sense of hormonal cycles, or simply looking for a unique way to journal, Moodoo's color-coded visuals help the user see trends in their moods over time.
+Moodoo is a journaling app built for mood tracking. Whether you're looking to map out the things that excite and frustrate you, working to identify triggers related to mental health issues, trying to make sense of hormonal cycles, or simply looking for a unique way to journal, Moodoo's color-coded visuals help the user see trends in their moods over time.
 
 ### How to use Moodoo
 
