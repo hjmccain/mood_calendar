@@ -7,6 +7,64 @@ $bright-red: #ff4040;
 $red-highlight: #ff8181;
 $almost-white: #F4F4F4;
 
+
+.submit-entry:hover, .cancel-btn:hover {
+	background-color: rgba(207, 207, 225, .5);
+border: 1px solid rgba(207, 207, 225, .5);
+}
+
 .mood-and-date {
 	font-family: $sans-serif;
+}
+
+.new-entry-top {
+	width: 110px;
+}
+
+.entry-form {
+	background-color: $light-purple;
+}
+
+.user-entry, .new-entry, .entry-form {
+	display: block;
+	margin: 0 auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	width: 75%;
+	max-width: 900px;
+	height: auto;
+}
+
+.textarea {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	border: 0px;
+	background-color: $almost-white;
+	outline: none;
+	resize: none;
+	padding: 2% 2% 2% 2%;
+	font-family: $serif;
+}
+
+.submit-entry {
+	margin: 8px 8px 8px 0px;
+}
+
+.cancel-btn {
+	margin: 8px 8px 8px 8px;
+}
+
+.submit-entry, .cancel-btn {
+	float: left;
+	background-color: rgba(207, 207, 225, .5);
+	padding: 8px 8px 8px 8px;
+	border: 1px solid $hover-purple;
+	font-family: $sans-serif;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	margin-bottom: 25px;
+}
+
+.user-entry, .textarea, .new-entry-top, .submit-entry, .cancel-btn {
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

@@ -22,50 +22,6 @@ button:visited {
 	font-color: black;
 }
 
-.entry-form {
-	background-color: $light-purple;
-}
-
-.user-entry, .new-entry, .entry-form {
-	display: block;
-	margin: 0 auto;
-	margin-top: 1%;
-	margin-bottom: 1%;
-	width: 75%;
-	max-width: 900px;
-	height: auto;
-}
-
-.new-entry-top {
-	background-color: $almost-white;
-}
-
-.textarea {
-	display: block;
-	margin: 0 auto;
-	width: 100%;
-	border: 0px;
-	background-color: $almost-white;
-	outline: none;
-	resize: none;
-	padding: 2% 2% 2% 2%;
-	font-family: $serif;
-}
-
-.submit-entry, .cancel-btn {
-	float: left;
-	margin: 8px 8px 8px 8px;
-	padding: 8px 8px 8px 8px;
-	border: 1px solid $hover-purple;
-	background-color: $hover-purple;
-	font-family: $sans-serif;
-}
-
-.submit-entry:hover, .cancel-btn:hover {
-	background-color: rgba(207, 207, 225, .5);
-border: 1px solid rgba(207, 207, 225, .5);
-}
-
 .router-link {
 	text-decoration: none;
 }
@@ -79,17 +35,6 @@ border: 1px solid rgba(207, 207, 225, .5);
 
 body {
 	background-color: $light-purple;
-}
-
-.mood-menu {
-	width: auto;
-	padding: 9px 0px 9px 9px;
-	margin: 0% 0% 0% 1%;
-}
-
-.filter-btn:hover, .mood-menu:hover {
-	background-color: rgba(207, 207, 225, .5);
-	border: none;
 }
 
 .mood, .text, .date, .user-entry, .edit-menu {
@@ -107,17 +52,4 @@ body {
 
 .mood {
 	margin: 1% 0% 1% 1%;
-}
-
-.entries-container {
-	background-color: $almost-white;
-
-	display: flex;
-	flex-direction: column;
-	padding-top: 1%;
-	padding-bottom: 1%;
-}
-
-.user-entry, .textarea, .new-entry-top {
-	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

@@ -28,8 +28,13 @@ const Entries = (props) => {
 			return 	<div className={'entries-div'}>
 								<ul>
 									<li className='new-entry'>
-										<NewEntryBtn />
-										<MoodDropDown dropText={'All moods'} />
+										<div className="flex">
+											<div>
+												<p className='select-from'>Filter by</p>
+												<MoodDropDown dropText={'All moods'} />
+											</div>
+											<NewEntryBtn />
+										</div>
 									</li>
 								</ul>
 								<ul className={'entries-container'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>

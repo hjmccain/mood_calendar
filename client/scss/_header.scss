@@ -12,14 +12,18 @@ $almost-white: #F4F4F4;
 
 .moodoo {
 	color: #ff4040;
-	max-width: 116px;
+	// max-width: 116px;
 
 	font-family: 'Pacifico', cursive;
 	font-size: 2em;
 
-	display: block;
+	display: inline-block;
 	padding: 2% 2% 2% 2%;
 	margin: 0% 0% 0% 0%;
 
 	cursor: pointer;
+}
+
+.fa {
+	display: inline;
 }
