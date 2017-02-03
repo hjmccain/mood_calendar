@@ -9,7 +9,9 @@ Moodoo is v1 of a journaling app for mood tracking. Whether you're looking to ma
 ### The code
 
 Frontend: React, Redux
+
 Backend: Node.js with Express
+
 Database: PostgreSQL hosted by ElephantSQL
 
 Moodoo was built using starter files compiled by @oampo.
