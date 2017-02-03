@@ -1,7 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
 import NewEntryBtn from './new_entry_btn';
-import DateDropDown from './date_drop_down';
 import MoodDropDown from './mood_drop_down';
 
 class HeaderBar extends React.Component {

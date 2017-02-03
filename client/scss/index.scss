@@ -2,6 +2,8 @@
 @import 'welcome';
 @import 'header';
 @import 'entry_colors';
+@import 'entry';
+@import 'entries_display';
 
 $serif: 'Scope One', serif;
 $logo: 'Pacifico', cursive;
@@ -79,47 +81,8 @@ body {
 	background-color: $light-purple;
 }
 
-.entries-div {
-	padding-top: 10px;
-	background-color: $almost-white;
-}
-
-.new-entry {
-	margin-top: 3%;
-}
-
-.new-entry-form {
-	display: inline-block;
-	margin-right: 4%;
-}
-
-.new-entry-btn {
-	background-color: rgba(207, 207, 225, .5);
-	font-family: 'Quicksand', sans-serif;
-	padding: 8px 8px 8px 8px;
-	border: 1px solid $hover-purple;
-}
-
-.new-entry-btn:hover {
-	background-color: $hover-purple;
-	padding: 8px 8px 8px 8px;
-	border: 1px solid $hover-purple;
-}
-
-.filter-btn, .mood-menu {
-	background-color: $almost-white;
-	font-family: 'Quicksand', sans-serif;
-	padding: 0px 0px 0px 0px;
-	margin: 0% 0% 0% 2%;
-}
-
-.filter-btn {
-	padding: 9px 9px 9px 9px;
-	margin: 0% 0% 0% 0%;
-}
-
 .mood-menu {
-	width: 108px;
+	width: auto;
 	padding: 9px 0px 9px 9px;
 	margin: 0% 0% 0% 1%;
 }
@@ -131,10 +94,6 @@ body {
 
 .mood, .text, .date, .user-entry, .edit-menu {
 	padding: 1% 1% 1% 1%;
-}
-
-.moodAndDate {
-	font-family: $sans-serif;
 }
 
 .entries-div.user-entry {
@@ -162,24 +121,3 @@ body {
 .user-entry, .textarea, .new-entry-top {
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//

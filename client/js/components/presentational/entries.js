@@ -2,7 +2,6 @@ import React from 'react';
 import Entry from './entry';
 import NewEntryBtn from './new_entry_btn';
 import MoodDropDown from './mood_drop_down';
-import DateDropDown from './date_drop_down';
 
 const Entries = (props) => {
 	let selectedEntries;

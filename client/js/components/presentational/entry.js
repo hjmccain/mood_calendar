@@ -11,7 +11,7 @@ function Entry (props) {
 	return	<li className={liClass} id={id} onMouseOver={props.onMouseOver}>
 						<EditMenuContainer id={id} mood={mood}/>
 						<p className={'text'}>{text}</p>
-						<p className={'moodAndDate'}>
+						<p className={'mood-and-date'}>
 							<span className={'mood'}>{capMood}</span>
 							on
 							<span className={'date'}>{moment(date).format('MMMM D, YYYY')}</span>
