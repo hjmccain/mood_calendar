@@ -13,12 +13,13 @@ $almost-white: #F4F4F4;
 border: 1px solid rgba(207, 207, 225, .5);
 }
 
-.mood-and-date {
-	font-family: $sans-serif;
+.new-entry-top {
+	height: auto;
+	width: 0px;
 }
 
-.new-entry-top {
-	width: 110px;
+.mood-and-date {
+	font-family: $sans-serif;
 }
 
 .entry-form {
@@ -65,6 +66,6 @@ border: 1px solid rgba(207, 207, 225, .5);
 	margin-bottom: 25px;
 }
 
-.user-entry, .textarea, .new-entry-top, .submit-entry, .cancel-btn {
+.user-entry, .textarea, .submit-entry, .cancel-btn {
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

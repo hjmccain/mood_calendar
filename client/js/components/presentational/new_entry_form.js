@@ -41,9 +41,9 @@ class NewEntryForm extends React.Component {
 			<HeaderBar />
 			<div className={'entry-form'}>
 				<form onSubmit={this.sendAddData}>
-
-						<MoodDropDown getMood={this.getMood} dropText={'Select mood'} />
-
+						<div className="new-entry-top">
+							<MoodDropDown getMood={this.getMood} dropText={'Select mood'} />
+						</div>
 					<br />
 					<TextArea default={''} getInput={this.getInput} />
 					<br />
