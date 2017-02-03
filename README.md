@@ -13,12 +13,19 @@ V1 of Moodoo is display only, and does not allow logging in or user accounts. To
 From the homepage you can:
 
 * Sort entries by mood
+
 [ screenshot ]
+
 * Create a new entry
+
 [ screenshot ]
+
 [ screenshot ]
+
 * Delete or edit existing entries
+
 [ screenshot ]
+
 [ screenshot ]
 
 ### The code
