@@ -7,14 +7,6 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
-// For local db connection
-// const knex = require('knex')({
-// 	client: 'pg',
-// 	connection: {
-// 		database: 'moodcal'
-// 	}
-// });
-
 const knex = require('knex')({
   client: 'pg',
 	connection: 'postgres://slqzfesh:G-iHM_lrX3WF_2Adny2rlbDeHbL4jnS5@babar.elephantsql.com:5432/slqzfesh'
