@@ -16,8 +16,7 @@ class HeaderBar extends React.Component {
 
 	sendMoodData(e) {
 		e.preventDefault();
-		console.log(this.props);
-		// this.props.selectMood(this.state.moodInput);
+		this.props.selectMood(this.state.moodInput);
 	}
 
 	getMood(mood) {

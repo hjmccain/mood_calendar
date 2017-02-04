@@ -7,17 +7,12 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
-// For local db connection
-// const knex = require('knex')({
-// 	client: 'pg',
-// 	connection: {
-// 		database: 'moodcal'
-// 	}
-// });
-
+For local db connection
 const knex = require('knex')({
-  client: 'pg',
-	connection: 'postgres://slqzfesh:G-iHM_lrX3WF_2Adny2rlbDeHbL4jnS5@babar.elephantsql.com:5432/slqzfesh'
+	client: 'pg',
+	connection: {
+		database: 'moodcal'
+	}
 });
 
 app.use(express.static(process.env.CLIENT_PATH));
