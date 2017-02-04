@@ -6,10 +6,10 @@ function WelcomePage () {
 		hashHistory.push('/entries');
 	}
 	return 	(
-		<div className={'welcome-container'}>
-			<div className={'welcome-child'}>
-				<h3 className={'welcome'}>Moodoo <i className="fa fa-moon-o" aria-hidden="true"></i></h3>
-				<button onClick={callLink} className={'enter-btn'}>Enter</button>
+		<div className="welcome-container">
+			<div className="welcome-child">
+				<h3 className="welcome">Moodoo</h3>
+				<button onClick={callLink} className="enter-btn">Enter</button>
 			</div>
 		</div>
 	)
