@@ -13,32 +13,32 @@ const Entries = (props) => {
 			props.getEntries();
 			return <div></div>;
 		} else {
-
 			if ((selectedMood === 'mood') || (!selectedMood)) {
 				selectedEntries = entries
 			} else {
 				selectedEntries = entries.filter((entry) => (entry.mood === selectedMood));
 			}
-
 			selectedEntries = selectedEntries.sort((a, b) => {
 				a = a.date;
 				b = b.date;
 				return a > b ? -1 : a < b ? 1 : 0;
 			});
-			return 	<div className={'entries-div'}>
-								<ul>
-									<li className='new-entry'>
-										<div className="flex">
-											<div>
-												<p className='select-from'>Filter by</p>
-												<MoodDropDown dropText={'All moods'} />
-											</div>
-											<NewEntryBtn />
-										</div>
-									</li>
-								</ul>
-								<ul className={'entries-container'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
+			return 	(
+				<div className={'entries-div'}>
+					<ul>
+						<li className='new-entry'>
+							<div className="flex">
+								<div>
+									<p className='select-from'>Filter by</p>
+									<MoodDropDown dropText={'All moods'} />
+								</div>
+								<NewEntryBtn />
 							</div>
+						</li>
+					</ul>
+					<ul className={'entries-container'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
+				</div>
+			)
 		}
 	} else {
 		return <div>Error: {props.error.error_info.message}</div>
