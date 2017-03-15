@@ -11,6 +11,7 @@ import NewEntryContainer from './components/container/new_entry_container';
 import EditEntryContainer from './components/container/edit_entry_container';
 import ConfirmationPage from './components/presentational/confirmation_page';
 import WelcomePage from './components/presentational/welcome_page';
+import 'whatwg-fetch';
 
 const routes = (
   <Provider store={store}>
