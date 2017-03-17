@@ -24,18 +24,12 @@ const Entries = (props) => {
 				return a > b ? -1 : a < b ? 1 : 0;
 			});
 			return 	(
-				<div className={'entries-div'}>
-					<ul>
-						<li className='new-entry'>
-							<div className="flex">
-								<div>
-									<p className='select-from'>Filter by</p>
-									<MoodDropDown dropText={'All moods'} />
-								</div>
-								<NewEntryBtn />
-							</div>
-						</li>
-					</ul>
+				<div className={'entries-page'}>
+					<div className="entries-page-menus">
+						<p className='select-from'>Filter by</p>
+						<MoodDropDown dropText={'All moods'} />
+            <NewEntryBtn />
+					</div>
 					<ul className={'entries-row'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
 				</div>
 			)

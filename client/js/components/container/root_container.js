@@ -16,7 +16,7 @@ class RootContainer extends React.Component {
 	}
 
 	render () {
-		return 	<div>
+		return 	<div className="full-page-container">
 							<HeaderBar />
 							<EntriesContainer />
 						</div>
