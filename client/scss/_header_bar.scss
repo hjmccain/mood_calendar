@@ -1,3 +1,43 @@
-.select-from {
+$moodoo: "Pacifico", serif;
+
+.moodoo {
+  font-family: $moodoo;
+  font-size: 60px;
+  margin: 0px 0px 20px 0px;
+}
+
+.header-bar .fa {
+  padding: 5px 10px 5px 5px;
+}
+
+.mood-dropdown-default {
+  width: 170px;
+  padding: 17px 10px 0px 10px;
+  background: cornsilk;
+  border-radius: 5px;
+  text-align: center;
   display: inline-block;
+  p {
+    display: inline-block;
+    height: 36px;
+    margin: 0px;
+    vertical-align: middle;
+  }
+  .fa-filter {
+    padding: 2px 2px 1px 2px;
+  }
+}
+
+.new-entry-form {
+  button {
+    margin-top: 20px;
+    height: 53px;
+    width: 170px;
+    padding: 10px 10px 10px 10px;
+    background: cornsilk;
+    border-radius: 5px;
+  }
+  .fa-plus-square {
+    vertical-align: middle;
+  }
 }

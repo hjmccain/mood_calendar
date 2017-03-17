@@ -31,7 +31,7 @@ class HeaderBar extends React.Component {
   render () {
     return (
       <div className={'header-bar'}>
-        <h3 onClick={this.callLink} className={'moodoo'}>Moodoo</h3>
+        <h3 onClick={this.callLink} className={'moodoo'}>moodoo</h3>
         <MoodDropDown dropText={'All moods'} />
         <NewEntryBtn />
       </div>

@@ -37,10 +37,12 @@ class MoodDropDown extends React.Component {
   render () {
     return (
       <div className="mood-dropdown">
-        <p className="mood-dropdown-default"
-          onClick={this.toggleClass.bind(this)}>
-          {this.state.selectedMood || 'Filter'}
-        </p>
+        <i className="fa fa-filter fa-2x" aria-hidden="true"></i>
+        <div className="mood-dropdown-default">
+          <p onClick={this.toggleClass.bind(this)}>
+            {this.state.selectedMood || 'Filter'}
+          </p>
+        </div>
         <div className={this.state.moodMenu}>
           <p onClick={() => {this.sendMood(null)}}>All moods</p>
           <p onClick={() => {this.sendMood("Happy")}}>Happy</p>

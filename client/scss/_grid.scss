@@ -1,9 +1,22 @@
+$entries: "Arvo", serif;
+$menu-text: "Duru Sans", sans-serif;
+
 .entries-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
+}
+
+.user-entry {
+  font-family: $entries;
+  line-height: 1.5;
+}
+
+.header-bar, button {
+  font-family: $menu-text;
+  font-size: 18px;
 }
 
 .user-entry,
