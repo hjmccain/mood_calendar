@@ -1,6 +1,11 @@
 @import 'reset';
 @import 'grid';
+@import 'header_bar';
 
 .full-page-container {
   max-width: 1200px;
+}
+
+.hidden {
+  display: none;
 }
