@@ -36,7 +36,7 @@ const Entries = (props) => {
 							</div>
 						</li>
 					</ul>
-					<ul className={'entries-container'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
+					<ul className={'entries-row'}>{selectedEntries.map((entry) => <Entry key={entry.id} entry={entry} /> )} </ul>
 				</div>
 			)
 		}

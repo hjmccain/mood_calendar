@@ -1,0 +1,37 @@
+/* clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.entries-row {
+  max-width: 1000px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+
+.user-entry {
+  float: left;
+  // height: 50px;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+  .user-entry {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .user-entry {
+    width: 30%;
+  }
+}
