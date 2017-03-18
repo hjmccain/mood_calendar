@@ -31,11 +31,18 @@ $menu-text: "Duru Sans", sans-serif;
   }
 }
 
+.fa-smile-o {
+  &:hover {
+    filter: brightness(95%);
+  }
+}
+
 .new-entry-top {
   color: #FFB586;
 }
 
 .confirmation {
+  font-family: $menu-text;
   margin-top: -400px;
   margin-left: 10%;
   text-align: center;
@@ -45,7 +52,7 @@ $menu-text: "Duru Sans", sans-serif;
   max-width: 400px;
   position: relative;
   width: 50%;
-  box-shadow: 0 0 5em #5C5C5C;
+  box-shadow: 0 0 100em #5C5C5C;
   p {
     padding-top: 30px;
   }
@@ -66,6 +73,9 @@ $menu-text: "Duru Sans", sans-serif;
   padding: 8px;
   border-radius: 2px;
   margin-top: 5px;
+  &:hover {
+    filter: brightness(95%);
+  }
 }
 
 .cancel-button {

@@ -66,3 +66,9 @@ $moodoo: "Pacifico", serif;
     color: #FFB586;
   }
 }
+
+.fa-plus-square, .fa-filter {
+  &:hover {
+    filter: brightness(95%);
+  }
+}

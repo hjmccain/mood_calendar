@@ -57,6 +57,9 @@ svg {
 
 #ambivalent {
   color: #738BA2;
+  &:hover {
+    filter: brightness(85%);
+  }
 }
 
 .awkward {
@@ -65,6 +68,9 @@ svg {
 
 #awkward {
   color: #9AB35F;
+  &:hover {
+    filter: brightness(85%);
+  }
 }
 
 .bored {
@@ -73,6 +79,9 @@ svg {
 
 #bored {
   color: #9DB0AE;
+  &:hover {
+    filter: brightness(85%);
+  }
 }
 
 .excited {
@@ -81,6 +90,9 @@ svg {
 
 #excited {
   color: #D1956E;
+  &:hover {
+    filter: brightness(85%);
+  }
 }
 
 .happy {
@@ -89,6 +101,9 @@ svg {
 
 #happy {
   color: #D1CA89;
+  &:hover {
+    filter: brightness(85%);
+  }
 }
 
 .sad {
@@ -97,6 +112,9 @@ svg {
 
 #sad {
   color: #AFA0A9;
+  &:hover {
+    filter: brightness(85%);
+  }
 }
 
 .depressed {
@@ -105,4 +123,7 @@ svg {
 
 #depressed {
   color: #8F73A9;
+  &:hover {
+    filter: brightness(85%);
+  }
 }
