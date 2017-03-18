@@ -4,15 +4,16 @@ import RootContainer from '../container/root_container';
 
 function HomePageBtn (props) {
 
-	const callLink = (e) => {
-		hashHistory.push('/entries');
-	}
+  const callLink = (e) => {
+    props.selectMood(null);
+    hashHistory.push('/entries');
+  }
 
-	return (
-		<button className={'cancel-btn'} onClick={callLink}>
-			{props.text}
-		</button>
-	)
+  return (
+    <button className={'cancel-button'} onClick={callLink}>
+      {props.text}
+    </button>
+  )
 }
 
 export default HomePageBtn;

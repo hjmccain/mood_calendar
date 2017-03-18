@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/entries_async_actions';
+import * as asyncActions from '../../actions/entries_async_actions';
+import * as actions from '../../actions/entries_actions';
 import EditEntryForm from '../presentational/edit_entry_form';
 
 const EditEntryContainer = (props) => {
@@ -11,7 +12,7 @@ const EditEntryContainer = (props) => {
 		return <div></div>;
 	} else {
 		const entry = entries.filter((entry) => entry.id.toString() === params.id);
-		return <EditEntryForm entry={entry[0]} editEntry={editEntry} id={params.id}/>
+		return <EditEntryForm selectMood={props.selectMood} entry={entry[0]} editEntry={editEntry} id={params.id}/>
 	}
 }
 
@@ -21,8 +22,9 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-		getEntries: () => {dispatch(actions.getEntries()) },
-    editEntry: (id, mood, text) => { dispatch(actions.editEntry(id, mood, text)) }
+		getEntries: () => {dispatch(asyncActions.getEntries()) },
+    editEntry: (id, mood, text) => { dispatch(asyncActions.editEntry(id, mood, text)) },
+    selectMood: (mood) => { dispatch(actions.selectMood(mood)) }
   }
 }
 

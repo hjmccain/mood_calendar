@@ -30,11 +30,11 @@ class EditMenu extends React.Component {
   render() {
     const selectClasses = `edit-menu ${this.props.mood}`
     return (
-      <div className="edit-dropdown">
+      <div className="edit-dropdown-container">
         <p className="edit-dropdown-default"
           onClick={this.toggleClass.bind(this)}
           ref={mood => this.moodInput = mood}>
-          <i className="fa fa-pencil-square fa-2x" aria-hidden="true"></i>
+          <i className="fa fa-pencil-square fa-2x" id={this.props.mood} aria-hidden="true"></i>
         </p>
         <div className={this.state.editMenu}>
           <p onClick={() => {this.selectionData('edit')}}>Edit</p>

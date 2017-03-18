@@ -10,13 +10,8 @@ class HeaderBar extends React.Component {
       moodInput: '',
       showText: true
     }
-    this.sendMoodData = this.sendMoodData.bind(this);
     this.getMood = this.getMood.bind(this);
     this.callLink = this.callLink.bind(this);
-  }
-
-  sendMoodData(e) {
-    e.preventDefault();
   }
 
   getMood(mood) {
@@ -32,11 +27,19 @@ class HeaderBar extends React.Component {
   }
 
   render () {
+    let filtersClass;
+    if (this.props.showOptions) {
+      filtersClass = "filters"
+    } else {
+      filtersClass = "filters hidden"
+    }
     return (
       <div className={'header-bar'}>
         <h3 onClick={this.callLink} className={'moodoo'}>moodoo</h3>
-        <MoodDropDown dropText={'All moods'} showText={this.showText.bind(this)} />
-        <NewEntryBtn showText={this.state.showText}/>
+        <div className={filtersClass}>
+          <MoodDropDown dropText={''} showText={this.showText.bind(this)} image={'fa fa-filter fa-2x'}/>
+          <NewEntryBtn showText={this.state.showText}/>
+        </div>
       </div>
     )
   }

@@ -10,7 +10,7 @@ class MoodDropDown extends React.Component {
       moodMenu: 'mood-dropdown-menu hidden',
       selectedMood: null,
       showText: true,
-      text: ''
+      text: '' || this.props.displayText
     }
     this.sendMood = this.sendMood.bind(this);
   }
@@ -24,7 +24,8 @@ class MoodDropDown extends React.Component {
       selectedMood: mood || 'All moods',
       moodMenu: "mood-dropdown-menu hidden"
     });
-    this.props.showText(true);
+    if (this.props.showText) { this.props.showText(true) }
+    this.props.getMood(sendMood);
   }
 
   toggleClass() {
@@ -33,17 +34,21 @@ class MoodDropDown extends React.Component {
         moodMenu: "mood-dropdown-menu",
         selectedMood: null
       });
-      this.props.showText(false);
+      if (this.props.showText) {
+        this.props.showText(false)
+      }
     } else {
       this.setState({ moodMenu: "mood-dropdown-menu hidden" });
-      this.props.showText(true);
+      if (this.props.showText) { this.props.showText(true) }
     }
   }
 
   displayText() {
     if (this.state.showText) {
-      if (this.state.text === '') {
+      if (this.state.text === '' && this.props.dropText !== 'hidden') {
         this.setState({ text: 'Filter moods' })
+      } else if ((this.state.text === 'What\'s your mood?' || this.state.text === '') && this.props.dropText === 'hidden') {
+        this.setState({ text: 'Show moods' })
       } else {
         this.setState({ text: '' })
       }
@@ -54,7 +59,7 @@ class MoodDropDown extends React.Component {
     return (
       <div className="mood-dropdown">
         <i
-          className="fa fa-filter fa-2x"
+          className={this.props.image}
           aria-hidden="true"
           onClick={this.toggleClass.bind(this)}
           onMouseOver={this.displayText.bind(this)} onMouseOut={this.displayText.bind(this)}
@@ -64,7 +69,7 @@ class MoodDropDown extends React.Component {
           <p>{this.state.selectedMood}</p>
         </div>
         <div className={this.state.moodMenu}>
-          <p onClick={() => {this.sendMood(null)}}>All moods</p>
+          <p className={this.props.dropText} onClick={() => {this.sendMood(null)}}>All moods</p>
           <p onClick={() => {this.sendMood("Happy")}}>Happy</p>
           <p onClick={() => {this.sendMood("Excited")}}>Excited</p>
           <p onClick={() => {this.sendMood("Awkward")}}>Awkward</p>

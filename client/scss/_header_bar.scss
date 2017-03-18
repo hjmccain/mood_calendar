@@ -2,26 +2,43 @@ $moodoo: "Pacifico", serif;
 
 .moodoo {
   font-family: $moodoo;
+  color: white;
   font-size: 60px;
   margin: 0px 0px 20px 0px;
+  padding: 20px;
+}
+
+.header-bar {
+  background-color: #FFB586;
 }
 
 .header-bar .fa {
   padding: 5px 10px 5px 5px;
+  color: #FFB586;
+}
+
+.filters {
+  position: absolute;
+  top: 137px;
+  left: 15px;
 }
 
 .mood-dropdown .display-text {
   position: absolute;
-  top: 107px;
-  left: 110px;
+  top: 0px;
+  left: 50px;
+  width: 200px;
+  color: #FFB586;
 }
 
 .mood-dropdown-default {
   display: inline-block;
   p {
     position: absolute;
-    top: 107px;
-    left: 110px;
+    top: 0px;
+    left: 50px;
+    width: 200px;
+    color: #FFB586;
   }
   .fa-filter {
     padding: 2px 2px 1px 2px;
@@ -30,10 +47,11 @@ $moodoo: "Pacifico", serif;
 
 .mood-dropdown-menu {
   position: absolute;
-  top: 115px;
-  left: 110px;
-  background: #ece898;
+  top: 7px;
+  left: 50px;
+  background: white;
   padding: 0px 10px 10px 10px;
+  box-shadow: 2px 2px 8px #5C5C5C;
 }
 
 .create-new-entry{
@@ -42,7 +60,9 @@ $moodoo: "Pacifico", serif;
   }
   p {
     position: absolute;
-    top: 154px;
-    left: 110px;
+    top: 43px;
+    left: 51px;
+    width: 200px;
+    color: #FFB586;
   }
 }

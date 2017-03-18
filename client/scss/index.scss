@@ -2,12 +2,12 @@
 @import 'grid';
 @import 'header_bar';
 @import 'entry';
+@import 'new_edit_entry';
 
 $moodoo: "Pacifico", serif;
 
-.full-page-container {
-  max-width: 1200px;
-  margin: 0px 40px 40px 40px;
+html {
+  background: #FFDDC8;
 }
 
 .hidden {

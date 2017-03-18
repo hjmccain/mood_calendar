@@ -1,0 +1,42 @@
+.entry-form {
+  margin-left: 40px;
+  .display-text {
+    top: 121px;
+    left: 76px;
+  }
+  .mood-dropdown-menu {
+    top: 121px;
+    left: 74px;
+    padding: 0px 10px 0px 10px;
+    box-shadow: 2px 2px 8px #888888;
+    p {
+      display: inline-block;
+      padding-right: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+}
+
+.new-entry-top {
+  color: #FFB586;
+}
+
+.submit-entry, .cancel-button {
+  background-color: #FFB586;
+  color: white;
+  padding: 8px;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+.cancel-button {
+  position: absolute;
+  top: 369px;
+  left: 134px;
+}
+
+.submit-entry {
+  margin-right: 10px;
+}

@@ -1,6 +1,6 @@
 svg {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   margin-right: 10px;
 }
 
@@ -14,40 +14,78 @@ svg {
   height: 0px;
 }
 
-.mood-and-edit {
+.date-and-mood {
   display: flex;
   align-items: center;
-  background: #ece898;
+  justify-content: space-between;
   padding: 10px;
+}
+
+.edit-dropdown-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 55px;
   .fa-pencil-square {
-    color: blue;
+    margin-right: 10px;
   }
+}
+
+.user-entry {
+  box-shadow: 2px 2px 8px #5C5C5C;
 }
 
 .ambivalent {
   background-color: #9DBEDE;
 }
 
+#ambivalent {
+  color: #738BA2;
+}
+
 .awkward {
   background-color: #BBDA73;
+}
+
+#awkward {
+  color: #9AB35F;
 }
 
 .bored {
   background-color: #BFD7D4;
 }
 
+#bored {
+  color: #9DB0AE;
+}
+
 .excited {
   background-color: #FFB586;
+}
+
+#excited {
+  color: #D1956E;
 }
 
 .happy {
   background-color: #FFF6A7;
 }
 
+#happy {
+  color: #D1CA89;
+}
+
 .sad {
   background-color: #F0DBE7;
 }
 
+#sad {
+  color: #AFA0A9;
+}
+
 .depressed {
-  background-color: #F0DBE7;
+  background-color: #C0ACD2;
+}
+
+#depressed {
+  color: #8F73A9;
 }

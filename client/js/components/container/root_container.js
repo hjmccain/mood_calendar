@@ -7,20 +7,22 @@ import MoodDropDown from '../presentational/mood_drop_down';
 import HeaderBar from '../presentational/header_bar';
 
 class RootContainer extends React.Component {
-	constructor() {
-		super();
-	}
+  constructor() {
+    super();
+  }
 
-	componentDidMount () {
-		this.props.dispatch(actions.getEntries());
-	}
+  componentDidMount () {
+    this.props.dispatch(actions.getEntries());
+  }
 
-	render () {
-		return 	<div className="full-page-container">
-							<HeaderBar />
-							<EntriesContainer />
-						</div>
-	}
+  render () {
+    return 	(
+      <div className="full-page-container">
+        <HeaderBar showOptions={true}/>
+        <EntriesContainer />
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = () => ({})

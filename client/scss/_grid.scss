@@ -4,14 +4,18 @@ $menu-text: "Duru Sans", sans-serif;
 .entries-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+  max-width: 1200px;
+  margin-left: 200px;
 }
 
 .user-entry {
   font-family: $entries;
   line-height: 1.5;
+  padding: 20px;
+  margin: 10px;
 }
 
 .header-bar, button {
@@ -22,17 +26,21 @@ $menu-text: "Duru Sans", sans-serif;
 .user-entry,
 .header-bar {
   width: 100%;
-  padding: 20px;
-  margin: 10px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (max-width: 600px) {
+  .entries-row {
+    margin: 125px auto;
+  }
+}
+
+@media only screen and (min-width: 900px) {
   .user-entry {
     width: 45%;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
   .user-entry {
     width: 31%;
   }

@@ -18,7 +18,7 @@ class NewEntryBtn extends React.Component {
       } else {
         this.setState({ text: '' })
       }
-    }    
+    }
   }
 
   render() {
