@@ -16,7 +16,7 @@ import 'whatwg-fetch';
 const routes = (
   <Provider store={store}>
 		<Router history={hashHistory}>
-			<Route path = '/' component={WelcomePage} />
+			<Route path = '/' component={RootContainer} />
 			<Route path="/entries" component={RootContainer} />
 			<Route path="/entries/:id" component={EditEntryContainer} />
 			<Route path="/new_entry" component={NewEntryContainer} />

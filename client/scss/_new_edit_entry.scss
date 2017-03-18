@@ -1,8 +1,20 @@
+$entries: "Arvo", serif;
+$menu-text: "Duru Sans", sans-serif;
+
 .entry-form {
+  font-family: $menu-text;
   margin-left: 40px;
   .display-text {
     top: 121px;
     left: 76px;
+  }
+  textarea {
+    font-family: $entries;
+    resize: none;
+    border: 0px;
+    margin-bottom: 12px;
+    width: 80%;
+    height: 400px;
   }
   .mood-dropdown-menu {
     top: 121px;
@@ -33,10 +45,22 @@
 
 .cancel-button {
   position: absolute;
-  top: 369px;
+  top: 594px;
   left: 134px;
 }
 
 .submit-entry {
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .entry-form .mood-dropdown-menu p {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .entry-form textarea {
+    width: 880px;
+  }
 }

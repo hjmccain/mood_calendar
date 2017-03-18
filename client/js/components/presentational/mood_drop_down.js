@@ -10,7 +10,7 @@ class MoodDropDown extends React.Component {
       moodMenu: 'mood-dropdown-menu hidden',
       selectedMood: null,
       showText: true,
-      text: '' || this.props.displayText
+      text: ''
     }
     this.sendMood = this.sendMood.bind(this);
   }
