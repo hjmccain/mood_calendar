@@ -2,14 +2,11 @@
 @import 'grid';
 @import 'header_bar';
 
-//Amatic+SC|Dawning+of+a+New+Day|Pacifico|Reenie+Beanie
-//Arvo:400,700|Cantarell:400,700|Enriqueta:400,700|Muli:400,700|Nunito:400,700
-//fonts.googleapis.com/css?family=Convergence|Duru+Sans|Inder|Miriam+Libre:400,700|Nobile:400,700" rel="stylesheet">
-
 $moodoo: "Pacifico", serif;
 
 .full-page-container {
   max-width: 1200px;
+  margin: 0px 40px 40px 40px;
 }
 
 .hidden {

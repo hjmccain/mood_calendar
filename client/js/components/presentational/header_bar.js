@@ -7,7 +7,8 @@ class HeaderBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      moodInput: ''
+      moodInput: '',
+      showText: true
     }
     this.sendMoodData = this.sendMoodData.bind(this);
     this.getMood = this.getMood.bind(this);
@@ -16,8 +17,6 @@ class HeaderBar extends React.Component {
 
   sendMoodData(e) {
     e.preventDefault();
-    console.log(this.props);
-    // this.props.selectMood(this.state.moodInput);
   }
 
   getMood(mood) {
@@ -28,12 +27,16 @@ class HeaderBar extends React.Component {
     hashHistory.push('/');
   }
 
+  showText(boolean) {
+    this.setState({ showText: boolean })
+  }
+
   render () {
     return (
       <div className={'header-bar'}>
         <h3 onClick={this.callLink} className={'moodoo'}>moodoo</h3>
-        <MoodDropDown dropText={'All moods'} />
-        <NewEntryBtn />
+        <MoodDropDown dropText={'All moods'} showText={this.showText.bind(this)} />
+        <NewEntryBtn showText={this.state.showText}/>
       </div>
     )
   }

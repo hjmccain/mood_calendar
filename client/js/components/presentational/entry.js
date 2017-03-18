@@ -1,6 +1,7 @@
 import React from 'react';
 import EditMenuContainer from '../container/edit_menu_container';
 import moment from 'moment';
+import emotions from './emotions';
 
 function Entry (props) {
   const { mood, id, text, date } = props.entry;
@@ -16,6 +17,7 @@ function Entry (props) {
         on
         <span className={'date'}>{moment(date).format('MMMM D, YYYY')}</span>
       </p>
+      {emotions.ambivalent}
       <EditMenuContainer id={id} mood={mood}/>
     </li>
   )

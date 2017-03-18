@@ -8,7 +8,9 @@ class MoodDropDown extends React.Component {
     super(props);
     this.state = {
       moodMenu: 'mood-dropdown-menu hidden',
-      selectedMood: null
+      selectedMood: null,
+      showText: true,
+      text: ''
     }
     this.sendMood = this.sendMood.bind(this);
   }
@@ -18,9 +20,11 @@ class MoodDropDown extends React.Component {
     mood ? sendMood = mood.toLowerCase() : sendMood = null;
     this.props.selectMood(sendMood);
     this.setState({
+      showText: false,
       selectedMood: mood || 'All moods',
       moodMenu: "mood-dropdown-menu hidden"
     });
+    this.props.showText(true);
   }
 
   toggleClass() {
@@ -29,19 +33,35 @@ class MoodDropDown extends React.Component {
         moodMenu: "mood-dropdown-menu",
         selectedMood: null
       });
+      this.props.showText(false);
     } else {
       this.setState({ moodMenu: "mood-dropdown-menu hidden" });
+      this.props.showText(true);
+    }
+  }
+
+  displayText() {
+    if (this.state.showText) {
+      if (this.state.text === '') {
+        this.setState({ text: 'Filter moods' })
+      } else {
+        this.setState({ text: '' })
+      }
     }
   }
 
   render () {
     return (
       <div className="mood-dropdown">
-        <i className="fa fa-filter fa-2x" aria-hidden="true"></i>
+        <i
+          className="fa fa-filter fa-2x"
+          aria-hidden="true"
+          onClick={this.toggleClass.bind(this)}
+          onMouseOver={this.displayText.bind(this)} onMouseOut={this.displayText.bind(this)}
+          ></i>
+        <p className="display-text">{this.state.text}</p>
         <div className="mood-dropdown-default">
-          <p onClick={this.toggleClass.bind(this)}>
-            {this.state.selectedMood || 'Filter'}
-          </p>
+          <p>{this.state.selectedMood}</p>
         </div>
         <div className={this.state.moodMenu}>
           <p onClick={() => {this.sendMood(null)}}>All moods</p>

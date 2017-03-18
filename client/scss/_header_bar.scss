@@ -10,34 +10,39 @@ $moodoo: "Pacifico", serif;
   padding: 5px 10px 5px 5px;
 }
 
+.mood-dropdown .display-text {
+  position: absolute;
+  top: 107px;
+  left: 110px;
+}
+
 .mood-dropdown-default {
-  width: 170px;
-  padding: 17px 10px 0px 10px;
-  background: cornsilk;
-  border-radius: 5px;
-  text-align: center;
   display: inline-block;
   p {
-    display: inline-block;
-    height: 36px;
-    margin: 0px;
-    vertical-align: middle;
+    position: absolute;
+    top: 107px;
+    left: 110px;
   }
   .fa-filter {
     padding: 2px 2px 1px 2px;
   }
 }
 
-.new-entry-form {
-  button {
-    margin-top: 20px;
-    height: 53px;
-    width: 170px;
-    padding: 10px 10px 10px 10px;
-    background: cornsilk;
-    border-radius: 5px;
-  }
+.mood-dropdown-menu {
+  position: absolute;
+  top: 115px;
+  left: 110px;
+  background: #ece898;
+  padding: 0px 10px 10px 10px;
+}
+
+.create-new-entry{
   .fa-plus-square {
     vertical-align: middle;
+  }
+  p {
+    position: absolute;
+    top: 154px;
+    left: 110px;
   }
 }
