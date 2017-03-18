@@ -16,6 +16,11 @@ export const DELETE_ENTRY_SUCCESS = 'DELETE_ENTRY_SUCCESS';
 export const deleteEntrySuccess = id => ({
 	type: DELETE_ENTRY_SUCCESS,
 	id
+});
+
+export const POST_SUCCESS = 'POST_SUCCESS';
+export const postSuccess = () => ({
+  type: POST_SUCCESS
 })
 
 // OTHER

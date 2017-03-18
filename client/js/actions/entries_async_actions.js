@@ -43,7 +43,9 @@ export const addEntry = (text, mood) => dispatch => {
 			throw new Error(res.statusText);
 		}
 		return res.json();
-	}).then(() => {}).catch(err => {
+	}).then(() => {
+    dispatch(actions.postSuccess());
+  }).catch(err => {
 		dispatch(actions.accessEntriesError(err));
 	});
 }

@@ -11,7 +11,8 @@ class NewEntryForm extends React.Component {
     super();
     this.state = {
       moodInput: '',
-      textInput: ''
+      textInput: '',
+      confirmation: 'confirmation hidden'
     }
   }
 
@@ -23,9 +24,9 @@ class NewEntryForm extends React.Component {
     } else if (!moodInput) {
       alert('How are you feeling? Choose a mood, then try submitting again.')
     } else {
-      this.props.postNewEntry(textInput, moodInput);
+      this.props.postNewEntry(textInput, moodInput)
       this.props.selectMood(null);
-      hashHistory.push('/entries')
+      this.setState({ confirmation: 'confirmation' })
     }
   }
 
@@ -33,7 +34,6 @@ class NewEntryForm extends React.Component {
   getMood(mood) { this.setState({ moodInput: mood }) }
 
   render () {
-    console.log(this.props);
     return (
       <div>
         <HeaderBar showOptions={false}/>
@@ -41,7 +41,7 @@ class NewEntryForm extends React.Component {
           <form onSubmit={this.sendAddData.bind(this)}>
             <div className="new-entry-top">
               <MoodDropDown
-                getMood={this.getMood}
+                getMood={this.getMood.bind(this)}
                 displayText={'What\'s your mood?'}
                 dropText={'hidden'}
                 image={'fa fa-smile-o fa-2x'}
@@ -53,6 +53,10 @@ class NewEntryForm extends React.Component {
             <EntrySubmission />
           </form>
           <HomePageBtn text={'Cancel'} selectMood={this.props.selectMood.bind(this)} />
+        </div>
+        <div className={this.state.confirmation}>
+          <p>We're posting your entry!</p>
+          <button onClick={() => {hashHistory.push('/entries')}}>OK</button>
         </div>
       </div>
     )

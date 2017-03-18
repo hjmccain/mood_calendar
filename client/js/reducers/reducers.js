@@ -36,6 +36,8 @@ const entriesState = (state = {}, action) => {
 				if (entry) return entry;
 			});
 			return state = Object.assign({}, newState);
+    case actions.POST_SUCCESS:
+      return state = Object.assign({}, state, { next: 'load' });
 		default:
 			return state;
 	}

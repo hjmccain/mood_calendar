@@ -6,7 +6,8 @@ import Entries from '../presentational/entries';
 const mapStateToProps = (state) => ({
 	selectedMood: state.stateInfo.selected_mood,
 	entries: state.entriesState.entries,
-	error: state.stateInfo
+	error: state.stateInfo,
+  next: state.next
 });
 
 const mapDispatchToProps = (dispatch) => {

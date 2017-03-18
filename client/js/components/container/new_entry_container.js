@@ -5,7 +5,8 @@ import * as actions from '../../actions/entries_actions';
 import NewEntryForm from '../presentational/new_entry_form';
 
 const mapStateToProps = (state) => ({
-  mood: state.selected_mood
+  mood: state.selected_mood,
+  next: state.next
 });
 
 const mapDispatchToProps = (dispatch) => {

@@ -6,7 +6,6 @@ import MoodDropDown from './mood_drop_down';
 const Entries = (props) => {
   let selectedEntries;
   const { entries, error, selectedMood } = props;
-  console.log('selected mood', props.selectedMood)
 
   if (!error.error_info) {
     if (!entries) {
