@@ -30,6 +30,23 @@ svg {
   }
 }
 
+.edit-dropdown-menu {
+  position: relative;
+  top: 54px;
+  left: 54px;
+  p {
+    background: white;
+    margin: 0px;
+    padding: 5px 10px 5px 10px;
+  }
+  p:nth-child(1) {
+    box-shadow: 2px 2px 2px #5C5C5C;
+  }
+  p:nth-child(2) {
+    box-shadow: 2px 2px 2px #5C5C5C;
+  }
+}
+
 .user-entry {
   box-shadow: 2px 2px 8px #5C5C5C;
 }
