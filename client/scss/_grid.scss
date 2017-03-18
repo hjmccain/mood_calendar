@@ -23,17 +23,18 @@ $menu-text: "Duru Sans", sans-serif;
 .header-bar {
   width: 100%;
   padding: 20px;
+  margin: 10px;
 }
 
 @media only screen and (min-width: 800px) {
   .user-entry {
-    width: 50%;
+    width: 45%;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .user-entry {
-    width: 33.33333%;
+    width: 31%;
   }
 
   .entries-page-menus {

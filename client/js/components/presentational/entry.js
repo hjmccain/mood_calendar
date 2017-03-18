@@ -11,14 +11,12 @@ function Entry (props) {
 
   return (
     <li className={liClass} id={id} onMouseOver={props.onMouseOver}>
+      <p className={'date'}>{moment(date).format('MMMM D, YYYY')}</p>
       <p className={'text'}>{text}</p>
-      <p className={'mood-and-date'}>
-        <span className={'mood'}>{capMood}</span>
-        on
-        <span className={'date'}>{moment(date).format('MMMM D, YYYY')}</span>
-      </p>
-      {emotions.ambivalent}
-      <EditMenuContainer id={id} mood={mood}/>
+      <div className="mood-and-edit">
+        {emotions[mood]}
+        <EditMenuContainer id={id} mood={mood}/>
+      </div>
     </li>
   )
 }

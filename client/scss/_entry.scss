@@ -1,0 +1,53 @@
+svg {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.date {
+  margin: 0px;
+}
+
+.edit-dropdown {
+  display: inline-block;
+  margin-top: -63px;
+  height: 0px;
+}
+
+.mood-and-edit {
+  display: flex;
+  align-items: center;
+  background: #ece898;
+  padding: 10px;
+  .fa-pencil-square {
+    color: blue;
+  }
+}
+
+.ambivalent {
+  background-color: #9DBEDE;
+}
+
+.awkward {
+  background-color: #BBDA73;
+}
+
+.bored {
+  background-color: #BFD7D4;
+}
+
+.excited {
+  background-color: #FFB586;
+}
+
+.happy {
+  background-color: #FFF6A7;
+}
+
+.sad {
+  background-color: #F0DBE7;
+}
+
+.depressed {
+  background-color: #F0DBE7;
+}
