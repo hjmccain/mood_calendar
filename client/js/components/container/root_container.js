@@ -20,6 +20,7 @@ class RootContainer extends React.Component {
       <div className="full-page-container">
         <HeaderBar showOptions={true}/>
         <EntriesContainer />
+        <div className="footer">Made by <a href="http://hannahmcca.in" target="blank">Hannah McCain</a></div>
       </div>
     )
   }
