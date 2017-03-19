@@ -20,12 +20,15 @@ class MoodDropDown extends React.Component {
     mood ? sendMood = mood.toLowerCase() : sendMood = null;
     this.props.selectMood(sendMood);
     this.setState({
-      showText: false,
+      showText: true,
       selectedMood: mood || 'All moods',
       moodMenu: "mood-dropdown-menu hidden"
     });
     if (this.props.showText) { this.props.showText(true) }
     this.props.getMood(sendMood);
+    if (this.props.dropText === 'hidden') {
+      this.setState({ text: mood })
+    }
   }
 
   toggleClass() {
