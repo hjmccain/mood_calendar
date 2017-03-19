@@ -11,7 +11,8 @@ class EditEntryForm extends React.Component {
     super(props);
     this.state = {
       moodInput: '',
-      textInput: ''
+      textInput: '',
+      confirmation: 'confirmation hidden'
     }
   }
 
@@ -29,7 +30,8 @@ class EditEntryForm extends React.Component {
       editEntry(id, textInput, moodInput)
     }
     this.props.selectMood(null);
-    hashHistory.push('/entries');
+    // hashHistory.push('/entries');
+    this.setState({ confirmation: 'confirmation' });
   }
 
   getInput(input) { this.setState({ textInput: input }) }
@@ -45,7 +47,7 @@ class EditEntryForm extends React.Component {
               <MoodDropDown
                 selectedMood={this.props.entry.mood}
                 displayText={'What\'s your mood?'}
-                getMood={this.getMood}
+                getMood={this.getMood.bind(this)}
                 dropText={'hidden'}
                 image={'fa fa-smile-o fa-2x'}
                 />
@@ -56,6 +58,10 @@ class EditEntryForm extends React.Component {
             <EntrySubmission />
           </form>
           <HomePageBtn text={'Cancel'} selectMood={this.props.selectMood.bind(this)}/>
+        </div>
+        <div className={this.state.confirmation}>
+          <p>We're posting your entry!</p>
+          <button onClick={() => {hashHistory.push('/entries')}}>OK</button>
         </div>
       </div>
     )
